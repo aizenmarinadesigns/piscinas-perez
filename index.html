@@ -1,0 +1,1778 @@
+<html lang="en" class="scroll-smooth"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Piscinas Pérez | Professional Pool Services &amp; Maintenance</title>
+<meta name="description" content="Premium pool services in the USA. Maintenance, repairs, cleaning &amp; renovations. Bilingual service. We speak Spanish. Licensed &amp; insured. Free estimates.">
+<!-- Open Graph -->
+<meta property="og:title" content="Piscinas Pérez | Professional Pool Services">
+<meta property="og:description" content="Family-owned pool service company. Maintenance, repairs, cleaning &amp; renovations. Bilingual service. Fair prices &amp; honest expertise. We speak Spanish.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_US">
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230ea5e9'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='20'>🏊</text></svg>">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+    theme: {
+        extend: {
+            fontFamily: {
+                manrope: ['Manrope', 'sans-serif'],
+                inter: ['Inter', 'sans-serif'],
+                sans: ['Inter', 'sans-serif'],
+            }
+        }
+    }
+}
+</script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #18181b; }
+    ::-webkit-scrollbar-thumb { background-color: #3f3f46; border-radius: 20px; }
+    
+    /* FAQ Animation */
+    details > summary { list-style: none; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] summary ~ * { animation: sweep .3s ease-in-out; }
+    @keyframes sweep {
+        0%    {opacity: 0; transform: translateY(-10px)}
+        100%  {opacity: 1; transform: translateY(0)}
+    }
+    details > summary .icon { transition: transform 0.3s; }
+    details[open] > summary .icon { transform: rotate(180deg); }
+    
+    /* Highlight effect */
+    .highlight-text {
+        background: linear-gradient(120deg, #bfdbfe 0%, #bfdbfe 100%);
+        background-repeat: no-repeat;
+        background-size: 100% 0.2em;
+        background-position: 0 88%;
+        transition: background-size 0.25s ease-in;
+    }
+    .group:hover .highlight-text {
+        background-size: 100% 88%;
+    }
+
+    /* Toggle Logic */
+    .toggle-checkbox:checked {
+        right: 0;
+        border-color: #2563eb;
+    }
+    .toggle-checkbox:checked + .toggle-label {
+        background-color: #2563eb;
+    }
+    .toggle-checkbox:checked + .toggle-label:before {
+        transform: translateX(100%);
+    }
+    
+    .toggle-label {
+        width: 48px;
+        height: 24px;
+        background-color: #52525b; /* zinc-600 */
+        border-radius: 9999px;
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+    }
+    
+    .toggle-label:before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border-radius: 50%;
+        transition: transform 0.2s ease-in-out;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    /* Language Toggle Classes */
+    .lang-es { display: none; }
+    body.spanish-mode .lang-en { display: none; }
+    body.spanish-mode .lang-es { display: inline; }
+    /* Block level overrides */
+    body.spanish-mode .lang-es-block { display: block; }
+    .lang-es-block { display: none; }
+    body.spanish-mode .lang-en-block { display: none; }
+    
+    /* Flex overrides */
+    body.spanish-mode .lang-es-flex { display: flex; }
+    .lang-es-flex { display: none; }
+    body.spanish-mode .lang-en-flex { display: none; }
+
+    /* Hide language toggle label on very small screens */
+    @media (max-width: 374px) {
+        .lang-toggle-text { display: none !important; }
+    }
+    /* Reviews infinite marquee */
+    @keyframes marquee-scroll {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    .reviews-marquee {
+        animation: marquee-scroll 40s linear infinite;
+    }
+    .reviews-marquee:hover {
+        animation-play-state: paused;
+    }
+</style>
+<script>
+    function toggleLanguage() {
+    document.body.classList.toggle('spanish-mode');
+    const isSpanish = document.body.classList.contains('spanish-mode');
+    document.querySelectorAll('.lang-es').forEach(el => {
+        el.style.display = isSpanish ? 'inline-block' : 'none';
+    });
+    document.querySelectorAll('.lang-en').forEach(el => {
+        el.style.display = isSpanish ? 'none' : 'inline-block';
+    });
+}
+
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        const isOpen = !menu.classList.contains('hidden');
+        if (isOpen) {
+            menu.classList.add('hidden');
+            document.body.style.overflow = '';
+        } else {
+            menu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    function toggleEquipo() {
+        const extra = document.getElementById('equipo-extra');
+        const icon = document.getElementById('equipo-btn-icon');
+        const isHidden = extra.style.display === 'none';
+        extra.style.display = isHidden ? 'contents' : 'none';
+        icon.setAttribute('icon', isHidden ? 'lucide:chevron-up' : 'lucide:chevron-down');
+        document.getElementById('equipo-label-es').textContent = isHidden ? 'Ver menos' : 'Ver el resto del equipo';
+        document.getElementById('equipo-label-en').textContent = isHidden ? 'Show less' : 'Meet the full team';
+    }
+
+    function togglePricing() {
+        const isAnnual = document.getElementById('pricing-toggle').checked;
+        const monthlyPrices = document.querySelectorAll('.price-monthly');
+        const annualPrices = document.querySelectorAll('.price-annual');
+        
+        if (isAnnual) {
+            monthlyPrices.forEach(el => el.classList.add('hidden'));
+            annualPrices.forEach(el => el.classList.remove('hidden'));
+        } else {
+            monthlyPrices.forEach(el => el.classList.remove('hidden'));
+            annualPrices.forEach(el => el.classList.add('hidden'));
+        }
+    }
+</script>
+</head>
+<body class="bg-white text-zinc-600 font-sans antialiased selection:bg-blue-500 selection:text-white relative spanish-mode">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 border-b border-zinc-100 bg-white/95 backdrop-blur-md">
+        <div class="flex h-16 max-w-6xl mx-auto px-6 items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tighter text-zinc-900 flex items-center gap-2">
+                <div class="bg-cyan-600 text-white p-1.5 rounded-lg">
+                    <iconify-icon icon="lucide:waves" width="16" height="16" stroke-width="2.5"></iconify-icon>
+                </div>
+                <span class="lang-en">PISCINAS PÉREZ</span>
+                <span class="lang-es">PISCINAS PÉREZ</span>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-500">
+                <a href="#trabajos" class="hover:text-blue-600 transition-colors">
+                    <span class="lang-en">Our Work</span>
+                    <span class="lang-es">Trabajos</span>
+                </a>
+                <a href="#promise" class="hover:text-blue-600 transition-colors">
+                    <span class="lang-en">The Promise</span>
+                    <span class="lang-es">La Promesa</span>
+                </a>
+                <a href="#plans" class="hover:text-blue-600 transition-colors">
+                    <span class="lang-en">Plans</span>
+                    <span class="lang-es">Planes</span>
+                </a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button onclick="toggleLanguage()" class="text-xs font-semibold text-zinc-500 hover:text-zinc-900 flex items-center gap-1 border border-zinc-200 px-3 py-1.5 rounded-full transition-colors cursor-pointer select-none">
+                    <iconify-icon icon="lucide:globe" width="14"></iconify-icon>
+                    <span class="lang-en lang-toggle-text">We Speak Spanish</span>
+                    <span class="lang-es lang-toggle-text">Switch to English</span>
+                </button>
+                <a href="https://wa.me/34623282101" class="hidden md:flex items-center gap-2 bg-zinc-900 text-white text-xs font-semibold px-5 py-2.5 rounded-full hover:bg-zinc-800 transition-all shadow-lg shadow-zinc-900/10">
+                    <iconify-icon icon="lucide:phone" width="14"></iconify-icon>
+                    (305) 555-0199
+                </a>
+                <!-- Mobile Hamburger Button -->
+                <button onclick="toggleMobileMenu()" class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg hover:bg-zinc-100 transition-colors" aria-label="Open menu">
+                    <iconify-icon icon="lucide:menu" width="22"></iconify-icon>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-white">
+        <div class="flex h-16 max-w-6xl mx-auto px-6 items-center justify-between border-b border-zinc-100">
+            <a href="#" class="text-xl font-bold tracking-tighter text-zinc-900 flex items-center gap-2">
+                <div class="bg-blue-600 text-white p-1.5 rounded-lg">
+                    <iconify-icon icon="lucide:hammer" width="16" height="16"></iconify-icon>
+                </div>
+                MIAMIFIX
+            </a>
+            <button onclick="toggleMobileMenu()" class="flex items-center justify-center w-10 h-10 rounded-lg hover:bg-zinc-100 transition-colors" aria-label="Close menu">
+                <iconify-icon icon="lucide:x" width="22"></iconify-icon>
+            </button>
+        </div>
+        <nav class="flex flex-col items-center gap-8 pt-12 text-lg font-semibold text-zinc-700">
+            <a href="#trabajos" onclick="toggleMobileMenu()" class="hover:text-blue-600 transition-colors">
+                <span class="lang-en">Our Work</span>
+                <span class="lang-es">Trabajos</span>
+            </a>
+            <a href="#promise" onclick="toggleMobileMenu()" class="hover:text-blue-600 transition-colors">
+                <span class="lang-en">The Promise</span>
+                <span class="lang-es">La Promesa</span>
+            </a>
+            <a href="#plans" onclick="toggleMobileMenu()" class="hover:text-blue-600 transition-colors">
+                <span class="lang-en">Plans</span>
+                <span class="lang-es">Planes</span>
+            </a>
+            <a href="#faq" onclick="toggleMobileMenu()" class="hover:text-blue-600 transition-colors">
+                <span class="lang-en">FAQ</span>
+                <span class="lang-es">Preguntas</span>
+            </a>
+            <a href="#footer" onclick="toggleMobileMenu()" class="hover:text-blue-600 transition-colors">
+                <span class="lang-en">Contact</span>
+                <span class="lang-es">Contacto</span>
+            </a>
+            <a href="https://wa.me/34623282101" class="flex items-center gap-2 bg-zinc-900 text-white text-sm font-semibold px-6 py-3 rounded-full mt-4">
+                <iconify-icon icon="lucide:phone" width="14"></iconify-icon>
+                (305) 555-0199
+            </a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                
+                <!-- Hero Copy -->
+                <div class="lg:w-1/2">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-50 border border-green-200 text-xs font-bold text-green-700 mb-6">
+                        <span class="relative flex h-2 w-2">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                        </span>
+                        <span class="lang-en">Online &amp; Ready to Dispatch</span>
+                        <span class="lang-es">En línea y listos para ir</span>
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-manrope font-bold text-zinc-900 tracking-tight leading-[1.1] mb-6 group cursor-default">
+                        <span class="lang-en">Crystal Clear Results.<br><span class="highlight-text text-blue-900">Expert pool care.</span></span>
+                        <span class="lang-es">Resultados cristalinos.<br><span class="highlight-text text-blue-900">Cuidado experto de piscina.</span></span>
+                    </h1>
+
+                    <p class="text-lg text-zinc-600 mb-8 max-w-lg leading-relaxed">
+                        <span class="lang-en">We're a family of certified pool experts dedicated to keeping your water crystal clear, your equipment running smooth, and your family safe. From routine maintenance to complete renovations — we show up on time, work clean, and don't leave until <span class="font-semibold text-zinc-900">you're satisfied.</span> Your pool deserves professionals who actually care.</span>
+                        <span class="lang-es">Somos una familia de expertos certificados en piscinas dedicados a mantener tu agua cristalina, tu equipo en perfecto funcionamiento y tu familia segura. Desde mantenimiento rutinario hasta renovaciones completas — llegamos a tiempo, trabajamos limpio y no nos vamos hasta que <span class="font-semibold text-zinc-900">estés satisfecho/a.</span> Tu piscina merece profesionales que realmente se preocupan.</span>
+                    </p>
+
+                    <!-- Urgent Action Block -->
+                    <div class="bg-red-50 border border-red-100 rounded-xl p-5 mb-8 flex items-start gap-4 max-w-md shadow-sm">
+                        <div class="bg-red-100 text-red-600 p-2 rounded-lg shrink-0">
+                            <iconify-icon icon="lucide:siren" width="24"></iconify-icon>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold text-red-900">
+                                <span class="lang-en">Pool emergency?</span>
+                                <span class="lang-es">¿Emergencia de piscina?</span>
+                            </h3>
+                            <p class="text-sm text-red-800/80 mt-1 leading-snug">
+                                <span class="lang-en">Pump failure? Cloudy water? Equipment broken? We respond within <span class="font-bold underline">24 hours</span>.</span>
+                                <span class="lang-es">¿Falla de bomba? ¿Agua turbia? ¿Equipo dañado? Respondemos en <span class="font-bold underline">menos de 24 horas</span>.</span>
+                            </p>
+                            <a href="https://wa.me/34623282101?text=Emergency" class="inline-flex items-center gap-2 mt-3 text-xs font-bold bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors shadow-red-500/20 shadow-lg">
+                                <span class="lang-en">Request Urgent Dispatch ($99 fee)</span>
+                                <span class="lang-es">Pedir Envío Urgente ($99 tarifa)</span>
+                                <iconify-icon icon="lucide:arrow-right" width="12"></iconify-icon>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center gap-4">
+                        <a href="#plans" class="w-full sm:w-auto px-8 py-4 bg-cyan-600 text-white text-sm font-semibold rounded-xl hover:bg-cyan-700 transition-all flex items-center justify-center gap-2 shadow-xl shadow-cyan-600/20">
+                            <span class="lang-en">Request Service</span>
+                            <span class="lang-es">Solicitar Servicio</span>
+                        </a>
+                        <a href="#trabajos" class="w-full sm:w-auto px-8 py-4 bg-white border border-cyan-200 text-cyan-700 text-sm font-semibold rounded-xl hover:bg-cyan-50 transition-all flex items-center justify-center">
+                            <span class="lang-en">View Our Portfolio</span>
+                            <span class="lang-es">Ver Nuestro Portafolio</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="lg:w-1/2 relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-blue-900/10 aspect-[4/5] lg:aspect-square">
+                        <!-- Mosaico 2×2 con fotos reales del equipo -->
+                        <div class="absolute inset-0 grid grid-cols-2 gap-1.5 p-1.5 bg-zinc-100">
+                            <div class="overflow-hidden rounded-xl">
+                                <img src="img/que-hacemos/handshake-miamifix.png" alt="Piscinas Pérez handyman ready to help" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" width="300" height="300">
+                            </div>
+                            <div class="overflow-hidden rounded-xl">
+                                <img src="img/que-hacemos/miami-fix-2.webp" alt="Kitchen repair by Piscinas Pérez" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy" width="300" height="300">
+                            </div>
+                            <div class="overflow-hidden rounded-xl">
+                                <img src="img/que-hacemos/miami-fix-6.png" alt="TV installation by Piscinas Pérez" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy" width="300" height="300">
+                            </div>
+                            <div class="overflow-hidden rounded-xl">
+                                <img src="img/que-hacemos/todo-ok-con-miamifix.png" alt="Interior painting by Piscinas Pérez" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy" width="300" height="300">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="mt-4 w-full bg-white/95 backdrop-blur p-4 rounded-xl border border-zinc-200 shadow-lg flex items-start gap-4">
+                        <div class="flex gap-0.5 text-orange-400 shrink-0 mt-0.5">
+                            <iconify-icon icon="lucide:star" width="16" class="fill-current"></iconify-icon>
+                            <iconify-icon icon="lucide:star" width="16" class="fill-current"></iconify-icon>
+                            <iconify-icon icon="lucide:star" width="16" class="fill-current"></iconify-icon>
+                            <iconify-icon icon="lucide:star" width="16" class="fill-current"></iconify-icon>
+                            <iconify-icon icon="lucide:star" width="16" class="fill-current"></iconify-icon>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-zinc-800">
+                                <span class="lang-en">"My pool has never looked better. Crystal clear water, perfectly balanced, every single week."</span>
+                                <span class="lang-es">"Mi piscina nunca se ha visto mejor. Agua cristalina, perfectamente equilibrada, cada semana."</span>
+                            </p>
+                            <p class="text-xs text-zinc-400 mt-1 font-bold uppercase tracking-wider">- Sarah M., Coral Gables</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================================
+         SECCIÓN TRABAJOS — Slider Antes & Después
+         ─────────────────────────────────────────────────────────────
+         Las imágenes van en: img/before-after/
+         Cada card usa UNA imagen compuesta (antes+después en una sola foto).
+         Para agregar una card nueva:
+           1. Copiá el bloque comentado como "Card N — Lugar"
+           2. Pegalo dentro de #trabajos-track
+           3. Actualizá imagen, alt, ubicación, tiempo, servicio e inversión.
+           El JS lee las cards dinámicamente — no hay que tocar el script.
+         ============================================================ -->
+    <section id="trabajos" class="py-24 bg-white border-t border-zinc-100">
+        <div class="max-w-6xl mx-auto px-6">
+
+            <!-- Encabezado + flechas de navegación (arriba a la derecha) -->
+            <div class="flex items-start justify-between gap-6 mb-10">
+                <div class="max-w-xl">
+                    <h2 class="text-3xl font-manrope font-bold text-zinc-900 mb-3">
+                        <span class="lang-en">Before &amp; After — Real Pool Transformations</span>
+                        <span class="lang-es">Antes &amp; Después — Transformaciones Reales de Piscina</span>
+                    </h2>
+                    <p class="text-zinc-500">
+                        <span class="lang-en">No stock photos. No filters. Just real pools restored and maintained to perfection.</span>
+                        <span class="lang-es">Sin fotos de stock. Sin filtros. Solo piscinas reales restauradas y mantenidas a la perfección.</span>
+                    </p>
+                </div>
+                <!-- Flechas de navegación -->
+                <div class="flex gap-2 shrink-0 pt-1">
+                    <button id="trabajos-prev"
+                        aria-label="Trabajo anterior"
+                        class="w-10 h-10 rounded-full border border-zinc-200 bg-white hover:bg-zinc-50 flex items-center justify-center transition-all disabled:opacity-40 disabled:cursor-not-allowed">
+                        <iconify-icon icon="lucide:chevron-left" width="18"></iconify-icon>
+                    </button>
+                    <button id="trabajos-next"
+                        aria-label="Siguiente trabajo"
+                        class="w-10 h-10 rounded-full border border-zinc-200 bg-white hover:bg-zinc-50 flex items-center justify-center transition-all disabled:opacity-40 disabled:cursor-not-allowed">
+                        <iconify-icon icon="lucide:chevron-right" width="18"></iconify-icon>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Viewport del slider (clip) -->
+            <div class="overflow-hidden">
+                <div id="trabajos-track"
+                    class="flex"
+                    style="gap: 24px; transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);">
+
+                    <!-- ─────────────────────────────────────────────────────
+                         Card 1 — Doral
+                         Servicio: Instalación Campana de Cocina
+                         Imagen: img/before-after/cocina-campana.jpg
+                         ───────────────────────────────────────────────────── -->
+                    <div class="trabajos-card group shrink-0 bg-white rounded-2xl border border-zinc-100 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
+                        <!-- Imagen con badges ANTES / DESPUÉS -->
+                        <div class="relative overflow-hidden aspect-video bg-zinc-100">
+                            <img
+                                src="img/before-after/instalacion-campana-cocina.png"
+                                onerror="this.onerror=null;this.src='img/handyman-kitchen.jpeg'"
+                                alt="Instalación de campana de cocina en Doral — antes y después"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy" width="600" height="338">
+                            <!-- Badge ANTES — izquierda -->
+                            <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full select-none">
+                                <span class="lang-es">Antes</span>
+                                <span class="lang-en">Before</span>
+                            </span>
+                            <!-- Badge DESPUÉS — derecha -->
+                            <span class="absolute top-3 right-3 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full select-none">
+                                <span class="lang-es">Después</span>
+                                <span class="lang-en">After</span>
+                            </span>
+                        </div>
+                        <!-- Grid de 4 datos (sin divisores entre columnas) -->
+                        <div class="p-5">
+                            <div class="grid grid-cols-2 gap-y-4">
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 mb-0.5">
+                                        <span class="lang-es">Ubicación</span><span class="lang-en">Location</span>
+                                    </p>
+                                    <p class="text-sm font-bold text-zinc-900">Doral</p>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 mb-0.5">
+                                        <span class="lang-es">Tiempo</span><span class="lang-en">Time</span>
+                                    </p>
+                                    <p class="text-sm font-bold text-zinc-900">2.5 hrs</p>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 mb-0.5">
+                                        <span class="lang-es">Servicio</span><span class="lang-en">Service</span>
+                                    </p>
+                                    <p class="text-sm font-bold text-zinc-900">
+                                        <span class="lang-es">Instalación de Equipo</span>
+                                        <span class="lang-en">Equipment Installation</span>
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 mb-0.5">
+                                        <span class="lang-es">Inversión</span><span class="lang-en">Investment</span>
+                                    </p>
+                                    <p class="text-sm font-bold text-blue-600">$185</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ─────────────────────────────────────────────────────
+                         Card 2 — Kendall
+                         Servicio: Reparación de Tubería (Baño)
+                         Imagen: img/before-after/bano-tuberia.jpg
+                         ───────────────────────────────────────────────────── -->
+                    <div class="trabajos-card group shrink-0 bg-white rounded-2xl border border-zinc-100 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
+                        <div class="relative overflow-hidden aspect-video bg-zinc-100">
+                            <img
+                                src="img/before-after/antes-despues-miami-fix.png"
+                                onerror="this.onerror=null;this.src='img/before-after/destapando-canierias.png'"
+                                alt="Reparación de tubería en Kendall — antes y después"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy" width="600" height="338">
+                            <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full select-none">
+                                <span class="lang-es">Antes</span>
+                                <span class="lang-en">Before</span>
+                            </span>
+                            <span class="absolute top-3 right-3 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full select-none">
+                                <span class="lang-es">Después</span>
+                                <span class="lang-en">After</span>
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <div class="grid grid-cols-2 gap-y-4">
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 mb-0.5">
+                                        <span class="lang-es">Ubicación</span><span class="lang-en">Location</span>
+                                    </p>
+                                    <p class="text-sm font-bold text-zinc-900">Kendall</p>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 mb-0.5">
+                                        <span class="lang-es">Tiempo</span><span class="lang-en">Time</span>
+                                    </p>
+                                    <p class="text-sm font-bold text-zinc-900">1.5 hrs</p>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 mb-0.5">
+                                        <span class="lang-es">Servicio</span><span class="lang-en">Service</span>
+                                    </p>
+                                    <p class="text-sm font-bold text-zinc-900">
+                                        <span class="lang-es">Reparación Tubería</span>
+                                        <span class="lang-en">Pipe Repair</span>
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 mb-0.5">
+                                        <span class="lang-es">Inversión</span><span class="lang-en">Investment</span>
+                                    </p>
+                                    <p class="text-sm font-bold text-blue-600">$145</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ─────────────────────────────────────────────────────
+                         Card 3 — Coral Gables
+                         Servicio: Montaje de TV + Cableado
+                         Imagen: img/before-after/sala-tv.jpg
+                         ───────────────────────────────────────────────────── -->
+                    <div class="trabajos-card group shrink-0 bg-white rounded-2xl border border-zinc-100 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
+                        <div class="relative overflow-hidden aspect-video bg-zinc-100">
+                            <img
+                                src="img/before-after/living-painting.png"
+                                onerror="this.onerror=null;this.src='img/hombre-instalando-tv.png'"
+                                alt="Montaje de TV y cableado en Coral Gables — antes y después"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy" width="600" height="338">
+                            <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full select-none">
+                                <span class="lang-es">Antes</span>
+                                <span class="lang-en">Before</span>
+                            </span>
+                            <span class="absolute top-3 right-3 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full select-none">
+                                <span class="lang-es">Después</span>
+                                <span class="lang-en">After</span>
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <div class="grid grid-cols-2 gap-y-4">
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 mb-0.5">
+                                        <span class="lang-es">Ubicación</span><span class="lang-en">Location</span>
+                                    </p>
+                                    <p class="text-sm font-bold text-zinc-900">Coral Gables</p>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 mb-0.5">
+                                        <span class="lang-es">Tiempo</span><span class="lang-en">Time</span>
+                                    </p>
+                                    <p class="text-sm font-bold text-zinc-900">1 hr</p>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 mb-0.5">
+                                        <span class="lang-es">Servicio</span><span class="lang-en">Service</span>
+                                    </p>
+                                    <p class="text-sm font-bold text-zinc-900">
+                                        <span class="lang-es">Colocación aplique luz + cuadro</span>
+                                        <span class="lang-en">Light installing + Picture hanging</span>
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 mb-0.5">
+                                        <span class="lang-es">Inversión</span><span class="lang-en">Investment</span>
+                                    </p>
+                                    <p class="text-sm font-bold text-blue-600">$120</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ─────────────────────────────────────────────────────
+                         Card 4 — Miami Beach
+                         Servicio: Armado de nursery
+                         Imagen: img/before-after/before-after-nursery.png
+
+                         ───────────────────────────────────────────────────── -->
+                    <div class="trabajos-card group shrink-0 bg-white rounded-2xl border border-zinc-100 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
+                        <div class="relative overflow-hidden aspect-video bg-zinc-100">
+                            <img
+                                src="img/before-after/before-after-nursery.png"
+                                onerror="this.onerror=null;this.src='img/mujer-pintando-pared.png'"
+                                alt="Pintura interior en Miami Beach — antes y después"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy" width="600" height="338">
+                            <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full select-none">
+                                <span class="lang-es">Antes</span>
+                                <span class="lang-en">Before</span>
+                            </span>
+                            <span class="absolute top-3 right-3 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full select-none">
+                                <span class="lang-es">Después</span>
+                                <span class="lang-en">After</span>
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <div class="grid grid-cols-2 gap-y-4">
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 mb-0.5">
+                                        <span class="lang-es">Ubicación</span><span class="lang-en">Location</span>
+                                    </p>
+                                    <p class="text-sm font-bold text-zinc-900">Miami Beach</p>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 mb-0.5">
+                                        <span class="lang-es">Tiempo</span><span class="lang-en">Time</span>
+                                    </p>
+                                    <p class="text-sm font-bold text-zinc-900">6 hrs</p>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 mb-0.5">
+                                        <span class="lang-es">Servicio</span><span class="lang-en">Service</span>
+                                    </p>
+                                    <p class="text-sm font-bold text-zinc-900">
+                                        <span class="lang-es">Preparado Nursery</span>
+                                        <span class="lang-en">Nursery Setting</span>
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 mb-0.5">
+                                        <span class="lang-es">Inversión</span><span class="lang-en">Investment</span>
+                                    </p>
+                                    <p class="text-sm font-bold text-blue-600">$500</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!-- ─────────────────────────────────────────────────────
+                         Card 5 — Miami Beach
+                         Servicio: Instalación cortina
+                         Imagen: img/before-after/instalacion-cortina-antes-despues.png
+                         ───────────────────────────────────────────────────── -->
+                    <div class="trabajos-card group shrink-0 bg-white rounded-2xl border border-zinc-100 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
+                        <div class="relative overflow-hidden aspect-video bg-zinc-100">
+                            <img
+                                src="img/before-after/instalacion-cortina-antes-despues.png"
+                                onerror="this.onerror=null;this.src='img/before-after/destapando-canierias.png'"
+                                alt="Reparación de tubería en Kendall — antes y después"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy" width="600" height="338">
+                            <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full select-none">
+                                <span class="lang-es">Antes</span>
+                                <span class="lang-en">Before</span>
+                            </span>
+                            <span class="absolute top-3 right-3 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full select-none">
+                                <span class="lang-es">Después</span>
+                                <span class="lang-en">After</span>
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <div class="grid grid-cols-2 gap-y-4">
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 mb-0.5">
+                                        <span class="lang-es">Ubicación</span><span class="lang-en">Location</span>
+                                    </p>
+                                    <p class="text-sm font-bold text-zinc-900">Miami Beach</p>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 mb-0.5">
+                                        <span class="lang-es">Tiempo</span><span class="lang-en">Time</span>
+                                    </p>
+                                    <p class="text-sm font-bold text-zinc-900">2 hrs</p>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 mb-0.5">
+                                        <span class="lang-es">Servicio</span><span class="lang-en">Service</span>
+                                    </p>
+                                    <p class="text-sm font-bold text-zinc-900">
+                                        <span class="lang-es">Cortina Automática</span>
+                                        <span class="lang-en">Motorized Curtain</span>
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 mb-0.5">
+                                        <span class="lang-es">Inversión</span><span class="lang-en">Investment</span>
+                                    </p>
+                                    <p class="text-sm font-bold text-blue-600">$180</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ─────────────────────────────────────────────────────
+                         Card 5 — Brickell
+                         Servicio: Fast Reno
+                         Imagen: img/before-after/cortina-automatica.jpg
+                         ───────────────────────────────────────────────────── -->
+                    <div class="trabajos-card group shrink-0 bg-white rounded-2xl border border-zinc-100 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
+                        <div class="relative overflow-hidden aspect-video bg-zinc-100">
+                            <img
+                                src="img/before-after/before-after-painting-2.png" 
+                                onerror="this.onerror=null;this.src='img/handyman-kitchen.jpeg'"
+                                alt="Fast Reno Pintura en Brickell — antes y después"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy" width="600" height="338">
+                            <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full select-none">
+                                <span class="lang-es">Antes</span>
+                                <span class="lang-en">Before</span>
+                            </span>
+                            <span class="absolute top-3 right-3 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full select-none">
+                                <span class="lang-es">Después</span>
+                                <span class="lang-en">After</span>
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <div class="grid grid-cols-2 gap-y-4">
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 mb-0.5">
+                                        <span class="lang-es">Ubicación</span><span class="lang-en">Location</span>
+                                    </p>
+                                    <p class="text-sm font-bold text-zinc-900">Brickell</p>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 mb-0.5">
+                                        <span class="lang-es">Tiempo</span><span class="lang-en">Time</span>
+                                    </p>
+                                    <p class="text-sm font-bold text-zinc-900">2.5 hrs</p>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 mb-0.5">
+                                        <span class="lang-es">Servicio</span><span class="lang-en">Service</span>
+                                    </p>
+                                    <p class="text-sm font-bold text-zinc-900">
+                                        <span class="lang-es">Limpieza y Mantenimiento</span>
+                                        <span class="lang-en">Cleaning & Maintenance</span>
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="text-[10px] font-semibold uppercase tracking-widest text-zinc-400 mb-0.5">
+                                        <span class="lang-es">Inversión</span><span class="lang-en">Investment</span>
+                                    </p>
+                                    <p class="text-sm font-bold text-blue-600">$150</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /trabajos-track -->
+            </div><!-- /overflow-hidden -->
+
+            <!-- Dots indicadores -->
+            <div id="trabajos-dots"
+                class="flex justify-center items-center gap-2 mt-8"
+                aria-label="Navegación de slides">
+            </div>
+
+        </div>
+ 
+    </section>
+
+    <!-- The Clean Promise -->
+    <section id="promise" class="py-20 bg-zinc-50 border-y border-zinc-200">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-manrope font-bold text-zinc-900 mb-4">
+                    <span class="lang-en">The Crystal Clear Promise</span>
+                    <span class="lang-es">La Promesa de Agua Cristalina</span>
+                </h2>
+                <p class="text-zinc-500">
+                    <span class="lang-en">Most pool companies just maintain the basics. We believe your pool should be a sparkling oasis — crystal clear water, perfectly balanced, and maintained to perfection.</span>
+                    <span class="lang-es">La mayoría de las compañías solo mantienen lo básico. Creemos que tu piscina debe ser un oasis resplandeciente — agua cristalina, perfectamente equilibrada y mantenida a la perfección.</span>
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-6">
+                        <iconify-icon icon="lucide:footprints" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="font-bold text-zinc-900 mb-2">
+                        <span class="lang-en">Crystal Clear Water Guaranteed</span>
+                        <span class="lang-es">Agua Cristalina Garantizada</span>
+                    </h3>
+                    <p class="text-sm text-zinc-500">
+                        <span class="lang-en">We test your water chemistry daily and balance it perfectly. No cloudy water, no algae, no guessing games — just crystal clear water, every single day.</span>
+                        <span class="lang-es">Probamos la química del agua diariamente y la equilibramos perfectamente. Sin agua turbia, sin algas, sin conjeturas — solo agua cristalina, cada día.</span>
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-6">
+                        <iconify-icon icon="lucide:sparkles" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="font-bold text-zinc-900 mb-2">
+                        <span class="lang-en">Your Pool, Well-Maintained</span>
+                        <span class="lang-es">Tu Piscina, Bien Mantenida</span>
+                    </h3>
+                    <p class="text-sm text-zinc-500">
+                        <span class="lang-en">We don't just skim leaves. We maintain filters, brushes walls, vacuums the floor, and check every component. Your pool gets the full treatment every visit.</span>
+                        <span class="lang-es">No solo sacamos hojas. Mantenemos filtros, limpiamos paredes, aspiramos el piso y revisamos cada componente. Tu piscina recibe tratamiento completo en cada visita.</span>
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-6">
+                        <iconify-icon icon="lucide:shield-check" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="font-bold text-zinc-900 mb-2">
+                        <span class="lang-en">Expert & Fully Insured</span>
+                        <span class="lang-es">Expertos y Completamente Asegurados</span>
+                    </h3>
+                    <p class="text-sm text-zinc-500">
+                        <span class="lang-en">Every technician is certified in pool chemistry and equipment maintenance. We carry full liability insurance, so you can relax knowing your pool is in expert hands.</span>
+                        <span class="lang-es">Cada técnico está certificado en química de piscinas y mantenimiento de equipos. Tenemos seguro de responsabilidad civil completo, así que puedes relajarte sabiendo que tu piscina está en manos expertas.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+   <section id="reviews" class="py-20 bg-white border-b border-zinc-200">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl font-manrope font-bold text-zinc-900 mb-4">
+                <span class="lang-en">What Our Neighbors Say</span>
+                <span class="lang-es">Lo Que Dicen Nuestros Vecinos</span>
+            </h2>
+            <p class="text-zinc-500">
+                <span class="lang-en">From family homes to property managers, we help Miami owners keep their investments in perfect shape.</span>
+                <span class="lang-es">Desde hogares familiares hasta administradores de propiedades, ayudamos a los dueños en Miami a mantener sus inversiones impecables.</span>
+            </p>
+        </div>
+        
+        <!-- Infinite marquee wrapper -->
+        <div class="overflow-hidden relative">
+            <div class="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+            <div class="reviews-marquee flex gap-6" style="width: max-content;">
+
+                <!-- ── SET 1 ── -->
+
+                <!-- 1 — María González -->
+                <div class="bg-zinc-50 p-8 rounded-2xl border border-zinc-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 min-w-[320px] max-w-[320px]">
+                    <div class="flex items-center mb-4">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1975607e9-1763295500639.png" alt="María González" class="w-12 h-12 rounded-full mr-4 object-cover border border-zinc-200" loading="lazy" width="48" height="48">
+                        <div>
+                            <p class="font-bold text-zinc-900 text-sm">María González</p>
+                            <p class="text-[10px] text-blue-600 font-bold uppercase tracking-widest">
+                                <span class="lang-en">Homeowner · Coral Gables</span>
+                                <span class="lang-es">Propietaria · Coral Gables</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3 text-xs">★★★★★</div>
+                    <p class="text-zinc-600 text-sm leading-relaxed italic">
+                        <span class="lang-en">"My pump failed mid-summer. Piscinas Pérez came same-day and fixed it. Professional, fast, and my pool is perfect again."</span>
+                        <span class="lang-es">"Mi bomba falló en pleno verano. Piscinas Pérez vino el mismo día y la reparó. Profesionales, rápidos, y mi piscina está perfecta de nuevo."</span>
+                    </p>
+                </div>
+
+                <!-- 2 — Luis Fernández -->
+                <div class="bg-zinc-50 p-8 rounded-2xl border border-zinc-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 min-w-[320px] max-w-[320px]">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full mr-4 flex items-center justify-center bg-blue-600 text-white font-bold text-sm shrink-0">LF</div>
+                        <div>
+                            <p class="font-bold text-zinc-900 text-sm">Luis Fernández</p>
+                            <p class="text-[10px] text-blue-600 font-bold uppercase tracking-widest">
+                                <span class="lang-en">Property Manager · Wynwood</span>
+                                <span class="lang-es">Administrador · Wynwood</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3 text-xs">★★★★★</div>
+                    <p class="text-zinc-600 text-sm leading-relaxed italic">
+                        <span class="lang-en">"Rental property owner here. Piscinas Pérez handles all my pools. Reliable, communicative, and my guests love the crystal-clear pools."</span>
+                        <span class="lang-es">"Soy dueño de propiedades de alquiler. Piscinas Pérez maneja todas mis piscinas. Confiables, comunicativos, y mis huéspedes aman las piscinas cristalinas."</span>
+                    </p>
+                </div>
+
+                <!-- 3 — Andrés Morales -->
+                <div class="bg-zinc-50 p-8 rounded-2xl border border-zinc-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 min-w-[320px] max-w-[320px]">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full mr-4 flex items-center justify-center bg-emerald-600 text-white font-bold text-sm shrink-0">AM</div>
+                        <div>
+                            <p class="font-bold text-zinc-900 text-sm">Andrés Morales</p>
+                            <p class="text-[10px] text-blue-600 font-bold uppercase tracking-widest">
+                                <span class="lang-en">Smart Member · Kendall</span>
+                                <span class="lang-es">Miembro · Kendall</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3 text-xs">★★★★★</div>
+                    <p class="text-zinc-600 text-sm leading-relaxed italic">
+                        <span class="lang-en">"I thought the membership was expensive. After the first visit I got it: $65/hr instead of $85, zero trip fee. Easy math."</span>
+                        <span class="lang-es">"Pensé que era caro. Después de la primera visita entendí: $65 la hora en vez de $85, sin costo de viaje. Matemática fácil."</span>
+                    </p>
+                </div>
+
+                <!-- 4 — Lourdes Suárez -->
+                <div class="bg-zinc-50 p-8 rounded-2xl border border-zinc-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 min-w-[320px] max-w-[320px]">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full mr-4 flex items-center justify-center bg-violet-600 text-white font-bold text-sm shrink-0">LS</div>
+                        <div>
+                            <p class="font-bold text-zinc-900 text-sm">Lourdes Suárez</p>
+                            <p class="text-[10px] text-blue-600 font-bold uppercase tracking-widest">
+                                <span class="lang-en">Homeowner · Doral</span>
+                                <span class="lang-es">Propietaria · Doral</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3 text-xs">★★★★★</div>
+                    <p class="text-zinc-600 text-sm leading-relaxed italic">
+                        <span class="lang-en">"I trust Piscinas Pérez completely. They're certified, insured, and professional. My pool is my sanctuary, and they treat it like their own."</span>
+                        <span class="lang-es">"Confío completamente en Piscinas Pérez. Son certificados, asegurados y profesionales. Mi piscina es mi santuario, y la tratan como propia."</span>
+                    </p>
+                </div>
+
+                <!-- 5 — Carolina Ríos -->
+                <div class="bg-zinc-50 p-8 rounded-2xl border border-zinc-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 min-w-[320px] max-w-[320px]">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full mr-4 flex items-center justify-center bg-rose-500 text-white font-bold text-sm shrink-0">CR</div>
+                        <div>
+                            <p class="font-bold text-zinc-900 text-sm">Carolina Ríos</p>
+                            <p class="text-[10px] text-blue-600 font-bold uppercase tracking-widest">
+                                <span class="lang-en">Homeowner · Brickell</span>
+                                <span class="lang-es">Propietaria · Brickell</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3 text-xs">★★★★★</div>
+                    <p class="text-zinc-600 text-sm leading-relaxed italic">
+                        <span class="lang-en">"They speak our language — and not just Spanish. They understand what we need, work clean, and always leave the house better than they found it."</span>
+                        <span class="lang-es">"Hablan nuestro idioma — y no solo el español. Entienden lo que uno necesita, trabajan limpio y siempre dejan la casa mejor que como la encontraron."</span>
+                    </p>
+                </div>
+
+                <!-- 6 — Inversiones Del Sol LLC -->
+                <div class="bg-zinc-50 p-8 rounded-2xl border border-zinc-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 min-w-[320px] max-w-[320px]">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full mr-4 flex items-center justify-center bg-amber-500 text-white font-bold text-xs shrink-0">IDS</div>
+                        <div>
+                            <p class="font-bold text-zinc-900 text-sm">Inversiones Del Sol LLC</p>
+                            <p class="text-[10px] text-blue-600 font-bold uppercase tracking-widest">
+                                <span class="lang-en">Real Estate Co. · Miami-Dade</span>
+                                <span class="lang-es">Inmobiliaria · Miami-Dade</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3 text-xs">★★★★★</div>
+                    <p class="text-zinc-600 text-sm leading-relaxed italic">
+                        <span class="lang-en">"Property manager across the USA. Piscinas Pérez is my go-to for maintenance and repairs. Dependable, professional, and they keep my pools immaculate."</span>
+                        <span class="lang-es">"Administrador de propiedades en todo USA. Piscinas Pérez es mi opción para mantenimiento y reparaciones. Confiables, profesionales, y mantienen mis piscinas impecables."</span>
+                    </p>
+                </div>
+
+                <!-- ── SET 2 (duplicate for seamless loop) ── -->
+
+                <div class="bg-zinc-50 p-8 rounded-2xl border border-zinc-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 min-w-[320px] max-w-[320px]" aria-hidden="true">
+                    <div class="flex items-center mb-4">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1975607e9-1763295500639.png" alt="" class="w-12 h-12 rounded-full mr-4 object-cover border border-zinc-200" width="48" height="48">
+                        <div>
+                            <p class="font-bold text-zinc-900 text-sm">María González</p>
+                            <p class="text-[10px] text-blue-600 font-bold uppercase tracking-widest">
+                                <span class="lang-en">Homeowner · Coral Gables</span>
+                                <span class="lang-es">Propietaria · Coral Gables</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3 text-xs">★★★★★</div>
+                    <p class="text-zinc-600 text-sm leading-relaxed italic">
+                        <span class="lang-en">"My pump failed mid-summer. Piscinas Pérez came same-day and fixed it. Professional, fast, and my pool is perfect again."</span>
+                        <span class="lang-es">"Mi bomba falló en pleno verano. Piscinas Pérez vino el mismo día y la reparó. Profesionales, rápidos, y mi piscina está perfecta de nuevo."</span>
+                    </p>
+                </div>
+                <div class="bg-zinc-50 p-8 rounded-2xl border border-zinc-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 min-w-[320px] max-w-[320px]" aria-hidden="true">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full mr-4 flex items-center justify-center bg-blue-600 text-white font-bold text-sm shrink-0">LF</div>
+                        <div>
+                            <p class="font-bold text-zinc-900 text-sm">Luis Fernández</p>
+                            <p class="text-[10px] text-blue-600 font-bold uppercase tracking-widest">
+                                <span class="lang-en">Property Manager · Wynwood</span>
+                                <span class="lang-es">Administrador · Wynwood</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3 text-xs">★★★★★</div>
+                    <p class="text-zinc-600 text-sm leading-relaxed italic">
+                        <span class="lang-en">"Rental property owner here. Piscinas Pérez handles all my pools. Reliable, communicative, and my guests love the crystal-clear pools."</span>
+                        <span class="lang-es">"Soy dueño de propiedades de alquiler. Piscinas Pérez maneja todas mis piscinas. Confiables, comunicativos, y mis huéspedes aman las piscinas cristalinas."</span>
+                    </p>
+                </div>
+                <div class="bg-zinc-50 p-8 rounded-2xl border border-zinc-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 min-w-[320px] max-w-[320px]" aria-hidden="true">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full mr-4 flex items-center justify-center bg-emerald-600 text-white font-bold text-sm shrink-0">AM</div>
+                        <div>
+                            <p class="font-bold text-zinc-900 text-sm">Andrés Morales</p>
+                            <p class="text-[10px] text-blue-600 font-bold uppercase tracking-widest">
+                                <span class="lang-en">Smart Member · Kendall</span>
+                                <span class="lang-es">Miembro · Kendall</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3 text-xs">★★★★★</div>
+                    <p class="text-zinc-600 text-sm leading-relaxed italic">
+                        <span class="lang-en">"I thought the membership was expensive. After the first visit I got it: $65/hr instead of $85, zero trip fee. Easy math."</span>
+                        <span class="lang-es">"Pensé que era caro. Después de la primera visita entendí: $65 la hora en vez de $85, sin costo de viaje. Matemática fácil."</span>
+                    </p>
+                </div>
+                <div class="bg-zinc-50 p-8 rounded-2xl border border-zinc-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 min-w-[320px] max-w-[320px]" aria-hidden="true">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full mr-4 flex items-center justify-center bg-violet-600 text-white font-bold text-sm shrink-0">LS</div>
+                        <div>
+                            <p class="font-bold text-zinc-900 text-sm">Lourdes Suárez</p>
+                            <p class="text-[10px] text-blue-600 font-bold uppercase tracking-widest">
+                                <span class="lang-en">Homeowner · Doral</span>
+                                <span class="lang-es">Propietaria · Doral</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3 text-xs">★★★★★</div>
+                    <p class="text-zinc-600 text-sm leading-relaxed italic">
+                        <span class="lang-en">"I trust Piscinas Pérez completely. They're certified, insured, and professional. My pool is my sanctuary, and they treat it like their own."</span>
+                        <span class="lang-es">"Confío completamente en Piscinas Pérez. Son certificados, asegurados y profesionales. Mi piscina es mi santuario, y la tratan como propia."</span>
+                    </p>
+                </div>
+                <div class="bg-zinc-50 p-8 rounded-2xl border border-zinc-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 min-w-[320px] max-w-[320px]" aria-hidden="true">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full mr-4 flex items-center justify-center bg-rose-500 text-white font-bold text-sm shrink-0">CR</div>
+                        <div>
+                            <p class="font-bold text-zinc-900 text-sm">Carolina Ríos</p>
+                            <p class="text-[10px] text-blue-600 font-bold uppercase tracking-widest">
+                                <span class="lang-en">Homeowner · Brickell</span>
+                                <span class="lang-es">Propietaria · Brickell</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3 text-xs">★★★★★</div>
+                    <p class="text-zinc-600 text-sm leading-relaxed italic">
+                        <span class="lang-en">"They speak our language — and not just Spanish. They understand what we need, work clean, and always leave the house better than they found it."</span>
+                        <span class="lang-es">"Hablan nuestro idioma — y no solo el español. Entienden lo que uno necesita, trabajan limpio y siempre dejan la casa mejor que como la encontraron."</span>
+                    </p>
+                </div>
+                <div class="bg-zinc-50 p-8 rounded-2xl border border-zinc-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 min-w-[320px] max-w-[320px]" aria-hidden="true">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full mr-4 flex items-center justify-center bg-amber-500 text-white font-bold text-xs shrink-0">IDS</div>
+                        <div>
+                            <p class="font-bold text-zinc-900 text-sm">Inversiones Del Sol LLC</p>
+                            <p class="text-[10px] text-blue-600 font-bold uppercase tracking-widest">
+                                <span class="lang-en">Real Estate Co. · Miami-Dade</span>
+                                <span class="lang-es">Inmobiliaria · Miami-Dade</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3 text-xs">★★★★★</div>
+                    <p class="text-zinc-600 text-sm leading-relaxed italic">
+                        <span class="lang-en">"Property manager across the USA. Piscinas Pérez is my go-to for maintenance and repairs. Dependable, professional, and they keep my pools immaculate."</span>
+                        <span class="lang-es">"Administrador de propiedades en todo USA. Piscinas Pérez es mi opción para mantenimiento y reparaciones. Confiables, profesionales, y mantienen mis piscinas impecables."</span>
+                    </p>
+                </div>
+
+            </div><!-- /reviews-marquee -->
+        </div><!-- /overflow-hidden -->
+    </div>
+</section>
+
+    <!-- Plans Section (Updated with Toggle & Renewal Logic) -->
+    <section id="plans" class="py-24 bg-zinc-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-20">
+             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-900 rounded-full blur-[120px]"></div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-manrope font-bold text-white mb-4">
+                    <span class="lang-en">Flexible Pool Service Plans</span>
+                    <span class="lang-es">Planes Flexibles de Servicio de Piscina</span>
+                </h2>
+                <p class="text-zinc-400 max-w-xl mx-auto">
+                    <span class="lang-en">One-time repairs or weekly maintenance. Choose what works best for your pool.</span>
+                    <span class="lang-es">Reparaciones puntuales o mantenimiento semanal. Elige lo que funcione mejor para tu piscina.</span>
+                </p>
+            </div>
+
+            <!-- Toggle Switch -->
+            <div class="flex justify-center mb-16">
+                <div class="flex items-center gap-4 bg-zinc-800/50 backdrop-blur px-5 py-2 rounded-full border border-zinc-700">
+                    <span class="text-sm font-medium text-white">Monthly</span>
+                    <label for="pricing-toggle" class="relative inline-block w-12 h-6" aria-label="Toggle annual pricing">
+                        <input type="checkbox" id="pricing-toggle" class="toggle-checkbox absolute w-0 h-0 opacity-0" onchange="togglePricing()" aria-label="Switch between monthly and annual pricing">
+                        <div class="toggle-label bg-zinc-600"></div>
+                    </label>
+                    <span class="text-sm font-medium text-white">Annual <span class="text-green-400 text-xs ml-1 font-bold">(-15%)</span></span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto items-center">
+                
+                <!-- Guest Card (Enhanced) -->
+                <div class="bg-zinc-800/50 backdrop-blur border border-white/10 rounded-2xl p-8 h-full flex flex-col hover:bg-zinc-800/80 transition-all">
+                    <div class="mb-6">
+                        <h3 class="text-lg font-bold text-white">
+                            <span class="lang-en">One-Time Service</span>
+                            <span class="lang-es">Servicio Único</span>
+                        </h3>
+                        <p class="text-sm text-zinc-400 mt-1">
+                            <span class="lang-en">For repairs or seasonal cleanup.</span>
+                            <span class="lang-es">Para reparaciones o limpieza estacional.</span>
+                        </p>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <span class="text-4xl font-bold text-white">$0</span>
+                        <span class="text-zinc-500 text-sm ml-1">/ mo</span>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8 text-sm text-zinc-300 flex-1">
+                        <li class="flex justify-between">
+                            <span class="lang-en">Labor Rate</span><span class="lang-es">Mano de Obra</span>
+                            <span class="font-semibold text-white">$95 / hr</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="lang-en">Service Fee</span><span class="lang-es">Tarifa de Servicio</span>
+                            <span class="font-semibold text-white">$75 / visit</span>
+                        </li>
+                         <li class="pt-4 border-t border-white/5 flex items-start gap-3">
+                            <iconify-icon icon="lucide:check-circle-2" class="text-zinc-500 shrink-0 mt-0.5"></iconify-icon>
+                            <span class="lang-en">Chemical testing included</span>
+                            <span class="lang-es">Pruebas químicas incluidas</span>
+                        </li>
+                         <li class="flex items-start gap-3">
+                            <iconify-icon icon="lucide:check-circle-2" class="text-zinc-500 shrink-0 mt-0.5"></iconify-icon>
+                            <span class="lang-en">Full cleanup guarantee</span>
+                            <span class="lang-es">Garantía de limpieza completa</span>
+                        </li>
+                    </ul>
+
+                    <a href="https://wa.me/34623282101?text=One-Time%20Pool%20Service%20request" class="block w-full py-3 border border-white/20 text-white text-sm font-semibold rounded-xl hover:bg-white/10 transition-all text-center">
+                        <span class="lang-en">Schedule Service</span>
+                        <span class="lang-es">Agendar Servicio</span>
+                    </a>
+                </div>
+
+                <!-- Smart Homeowner Card -->
+                <div class="bg-zinc-800 rounded-2xl p-8 relative shadow-[0_0_60px_-15px_rgba(37,99,235,0.3)] border border-blue-500/30 lg:scale-105 z-20">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">
+                        <span class="lang-en">Best Value</span><span class="lang-es">Mejor Valor</span>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                        <span class="lang-en">Weekly Maintenance</span>
+                        <span class="lang-es">Mantenimiento Semanal</span>
+                        <iconify-icon icon="lucide:droplets" class="text-blue-400" width="16"></iconify-icon>
+                    </h3>
+                    
+                    <!-- Monthly Price -->
+                    <div class="price-monthly mt-6 mb-2">
+                        <span class="text-5xl font-bold text-white">$29</span>
+                        <span class="text-zinc-400 text-sm">/ month</span>
+                    </div>
+                    <!-- Annual Price -->
+                    <div class="price-annual hidden mt-6 mb-2">
+                        <span class="text-5xl font-bold text-white">$290</span>
+                        <span class="text-zinc-400 text-sm">/ year</span>
+                    </div>
+
+                    <div class="min-h-[20px] mb-6">
+                        <p class="price-annual hidden text-[10px] text-green-400 uppercase tracking-wide leading-tight">
+                            <span class="lang-en">Save 2 months of fees by paying yearly.</span>
+                            <span class="lang-es">Ahorra 2 meses pagando anualmente.</span>
+                        </p>
+                    </div>
+                    
+                    <div class="bg-blue-900/20 rounded-lg p-4 mb-6 border border-blue-500/20">
+                        <p class="text-xs text-blue-200 mb-2 font-semibold"><span class="lang-en">THE MATH IS SIMPLE:</span><span class="lang-es">MATEMÁTICA SIMPLE:</span></p>
+                        <div class="flex justify-between text-sm mb-1 text-zinc-300">
+                            <span class="lang-en">Standard Trip Fee</span><span class="lang-es">Tarifa Visita Estándar</span>
+                            <span class="text-red-400 line-through">$50</span>
+                        </div>
+                        <div class="flex justify-between text-sm text-white font-bold">
+                            <span class="lang-en">Member Trip Fee</span><span class="lang-es">Tarifa Visita Miembros</span>
+                            <span class="text-green-400">$0 (Free)</span>
+                        </div>
+                    </div>
+
+                    <ul class="space-y-4 mb-8 text-sm text-zinc-300">
+                        <li class="flex justify-between">
+                            <span class="lang-en">Labor Rate</span><span class="lang-es">Mano de Obra</span>
+                            <span class="font-bold text-white">$65 / hr</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="lang-en">Priority Booking</span><span class="lang-es">Prioridad</span>
+                            <span class="text-white"><iconify-icon icon="lucide:check" class="text-green-400"></iconify-icon></span>
+                        </li>
+                    </ul>
+
+                    <!-- Call to Action for Consultation -->
+                    <div class="text-center">
+                        <a href="https://wa.me/34623282101?text=I%20want%20to%20become%20a%20member" class="block w-full py-4 bg-blue-600 text-white text-sm font-bold rounded-xl hover:bg-blue-500 transition-all text-center shadow-lg shadow-blue-600/25 mb-3">
+                            <span class="lang-en">Become a Member</span>
+                            <span class="lang-es">Hacerse Miembro</span>
+                        </a>
+                        <p class="text-[10px] text-zinc-500">
+                            <span class="lang-en">Cancel anytime with 30 days notice.</span>
+                            <span class="lang-es">Cancela cuando quieras (aviso de 30 días).</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Landlord Card (Enhanced) -->
+                <div class="bg-zinc-800/50 backdrop-blur border border-white/10 rounded-2xl p-8 h-full flex flex-col hover:bg-zinc-800/80 transition-all">
+                    <div class="mb-6">
+                        <h3 class="text-lg font-bold text-white">
+                            <span class="lang-en">Pool Owner Plan</span>
+                            <span class="lang-es">Plan Propietario Piscina</span>
+                        </h3>
+                        <p class="text-sm text-zinc-400 mt-1">
+                            <span class="lang-en">Complete peace of mind.</span>
+                            <span class="lang-es">Tranquilidad total.</span>
+                        </p>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <span class="text-4xl font-bold text-white">$290</span>
+                        <span class="text-zinc-500 text-sm ml-1">/ year</span>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8 text-sm text-zinc-300 flex-1">
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="lucide:check-circle-2" class="text-blue-500 shrink-0 mt-0.5"></iconify-icon>
+                            <span class="lang-en">Bi-weekly service visits</span>
+                            <span class="lang-es">Visitas quincenales</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="lucide:check-circle-2" class="text-blue-500 shrink-0 mt-0.5"></iconify-icon>
+                            <span class="lang-en">Equipment troubleshooting included</span>
+                            <span class="lang-es">Diagnóstico de equipo incluido</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="lucide:check-circle-2" class="text-blue-500 shrink-0 mt-0.5"></iconify-icon>
+                            <span class="lang-en">Seasonal opening & closing</span>
+                            <span class="lang-es">Apertura y cierre estacional</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="https://wa.me/34623282101?text=Pool%20Owner%20Plan%20inquiry" class="block w-full py-3 border border-white/20 text-white text-sm font-semibold rounded-xl hover:bg-white/10 transition-all text-center">
+                        <span class="lang-en">Get Started</span>
+                        <span class="lang-es">Comenzar</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section (Restored & Styled) -->
+    <section id="faq" class="py-24 bg-white border-b border-zinc-100">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-3xl font-manrope font-bold text-zinc-900 mb-10 text-center">
+                <span class="lang-en">Common Questions</span>
+                <span class="lang-es">Preguntas Frecuentes</span>
+            </h2>
+
+            <div class="space-y-4">
+                <!-- Question 1 -->
+                <details class="group bg-zinc-50 p-6 rounded-2xl cursor-pointer border border-zinc-200 open:border-blue-500 open:bg-blue-50/50 transition-all">
+                    <summary class="flex justify-between items-center font-bold text-zinc-900">
+                        <span class="lang-en">Do you bring your own tools and supplies?</span>
+                        <span class="lang-es">¿Traen sus propias herramientas y materiales?</span>
+                        <iconify-icon icon="lucide:chevron-down" class="icon text-zinc-400 group-hover:text-zinc-600" width="20"></iconify-icon>
+                    </summary>
+                    <p class="mt-4 text-zinc-600 text-sm leading-relaxed">
+                        <span class="lang-en">Yes, we come fully equipped with professional tools. For common supplies (screws, nails, glue), we provide them free. For specific materials (like a new faucet or paint), we can buy them for you or use what you provide.</span>
+                        <span class="lang-es">Sí, venimos totalmente equipados. Incluimos suministros básicos (tornillos, pegamento) gratis. Para materiales específicos (un grifo nuevo o pintura), podemos comprarlos por ti o usar los que tengas.</span>
+                    </p>
+                </details>
+
+                <!-- Question 2 -->
+                <details class="group bg-zinc-50 p-6 rounded-2xl cursor-pointer border border-zinc-200 open:border-blue-500 open:bg-blue-50/50 transition-all">
+                    <summary class="flex justify-between items-center font-bold text-zinc-900">
+                        <span class="lang-en">What areas do you cover?</span>
+                        <span class="lang-es">¿Qué áreas cubren?</span>
+                        <iconify-icon icon="lucide:chevron-down" class="icon text-zinc-400 group-hover:text-zinc-600" width="20"></iconify-icon>
+                    </summary>
+                    <p class="mt-4 text-zinc-600 text-sm leading-relaxed">
+                        <span class="lang-en">We serve all of Miami-Dade county, from Aventura to Homestead, including Miami Beach, Coral Gables, and Doral.</span>
+                        <span class="lang-es">Servimos todo el condado de Miami-Dade, desde Aventura hasta Homestead, incluyendo Miami Beach, Coral Gables y Doral.</span>
+                    </p>
+                </details>
+
+                <!-- Question 3 -->
+                <details class="group bg-zinc-50 p-6 rounded-2xl cursor-pointer border border-zinc-200 open:border-blue-500 open:bg-blue-50/50 transition-all">
+                    <summary class="flex justify-between items-center font-bold text-zinc-900">
+                        <span class="lang-en">Is your work guaranteed?</span>
+                        <span class="lang-es">¿Su trabajo está garantizado?</span>
+                        <iconify-icon icon="lucide:chevron-down" class="icon text-zinc-400 group-hover:text-zinc-600" width="20"></iconify-icon>
+                    </summary>
+                    <p class="mt-4 text-zinc-600 text-sm leading-relaxed">
+                        <span class="lang-en">Absolutely. We offer a 30-day labor guarantee on all repairs. If it breaks again because of our workmanship, we fix it for free. That's the family seal of quality.</span>
+                        <span class="lang-es">Absolutamente. Ofrecemos garantía de mano de obra de 30 días. Si se rompe de nuevo por nuestro trabajo, lo arreglamos gratis. Ese es nuestro sello de calidad familiar.</span>
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl font-manrope font-bold text-zinc-900 mb-4">
+                <span class="lang-en">From Our Family to Yours</span>
+                <span class="lang-es">De Nuestra Familia a la Tuya</span>
+            </h2>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-8 lg:gap-16 items-center">
+            <div class="md:w-1/2">
+                <div class="relative">
+                    <img src="img/familia-rodriguez.png"
+                         class="rounded-3xl object-cover h-[320px] md:h-[380px] lg:h-[450px] w-full shadow-2xl"
+                         alt="The Rodriguez family, founders of Miami Fix" loading="lazy" width="600" height="450">
+                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-600/10 rounded-full blur-3xl -z-10"></div>
+                </div>
+            </div>
+
+            <div class="md:w-1/2">
+                <div class="prose prose-zinc text-zinc-500 text-lg">
+                    <p class="mb-6">
+                        <span class="lang-en">Hola! We are the Rodriguez family. When we moved to Miami 15 years ago, my father started fixing things for neighbors just to make ends meet. He didn't speak much English then, but his work spoke for itself.</span>
+                        <span class="lang-es">¡Hola! Somos la familia Rodríguez. Cuando nos mudamos a Miami hace 15 años, mi padre empezó a arreglar cosas para los vecinos. No hablaba mucho inglés entonces, pero su trabajo hablaba por sí mismo.</span>
+                    </p>
+                    <p class="mb-6">
+                        <span class="lang-en">He taught us that a handyman isn't just someone who fixes a leaky pipe—it's someone who brings peace of mind. He always said, <em class="text-zinc-800 font-medium">"Treat their home like it's Abuela's house."</em></span>
+                        <span class="lang-es">Nos enseñó que un handyman no es solo quien arregla una tubería, es quien trae tranquilidad. Siempre decía: <em class="text-zinc-800 font-medium">"Trata su casa como si fuera la de la Abuela."</em></span>
+                    </p>
+                </div>
+                
+                <div class="flex items-center gap-4 mt-8">
+                    <div class="h-px bg-zinc-200 flex-1"></div>
+                    <span class="text-xl font-bold text-blue-600 font-manrope italic">The Rodriguez Family</span>
+                    <div class="h-px bg-zinc-200 flex-1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Conocé al Equipo -->
+    <section id="equipo" class="py-24 bg-zinc-50 border-t border-zinc-100">
+        <div class="max-w-6xl mx-auto px-6">
+
+            <!-- Encabezado -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-manrope font-bold text-zinc-900 mb-4">
+                    <span class="lang-en">Meet who's coming to your home</span>
+                    <span class="lang-es">Conocé quién viene a tu casa</span>
+                </h2>
+                <p class="text-zinc-500 leading-relaxed">
+                    <span class="lang-en">We're a family business where everyone has their specialty, but together we can handle whatever you need — always at the best prices, clean, fast, and done right.</span>
+                    <span class="lang-es">Somos una empresa familiar donde cada uno tiene su especialidad, pero juntos podemos hacer lo que usted necesite — siempre con los mejores precios, limpios, rápidos y bien hechos.</span>
+                </p>
+            </div>
+
+            <!-- Grid del equipo: 2 cols mobile / 4 cols tablet+ -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-10">
+
+                <!-- El Dueño — destacado -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="relative mb-4">
+                        <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-4 ring-blue-600/25 shadow-xl bg-zinc-50">
+                            <img src="img/quienes-somos/el-duenio.png" alt="Fundador de Piscinas Pérez" class="w-full h-full object-cover scale-150" loading="lazy" width="112" height="112">
+                        </div>
+                        <span class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-[9px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-full whitespace-nowrap shadow">
+                            <span class="lang-es">Fundador</span>
+                            <span class="lang-en">Founder</span>
+                        </span>
+                    </div>
+                    <p class="font-bold text-zinc-900 text-sm mt-1">Carlos</p>
+                    <p class="text-zinc-400 text-xs mt-0.5">
+                        <span class="lang-es">Dueño & Arreglos Generales</span>
+                        <span class="lang-en">Owner & General Repairs</span>
+                    </p>
+                </div>
+
+                <!-- Tony — Electricista -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-2 ring-zinc-200 shadow-md mb-4 bg-zinc-50">
+                        <img src="img/quienes-somos/tony-electricista.png" alt="Tony" class="w-full h-full object-cover scale-150" loading="lazy" width="112" height="112">
+                    </div>
+                    <p class="font-bold text-zinc-900 text-sm">Tony</p>
+                    <p class="text-zinc-400 text-xs mt-0.5">
+                        <span class="lang-es">Especialista en Equipo</span>
+                        <span class="lang-en">Equipment Specialist</span>
+                    </p>
+                </div>
+
+                <!-- Carlos — Arreglos Generales -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-2 ring-zinc-200 shadow-md mb-4 bg-zinc-50">
+                        <img src="img/quienes-somos/carlos-arreglos-generales.png" alt="Carlos" class="w-full h-full object-cover scale-150" loading="lazy" width="112" height="112">
+                    </div>
+                    <p class="font-bold text-zinc-900 text-sm">Carlos</p>
+                    <p class="text-zinc-400 text-xs mt-0.5">
+                        <span class="lang-es">Arreglos Generales</span>
+                        <span class="lang-en">General Repairs</span>
+                    </p>
+                </div>
+
+                <!-- Alejandro — Fontanería -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-2 ring-zinc-200 shadow-md mb-4 bg-zinc-50">
+                        <img src="img/quienes-somos/alejandro-fontaneria.png" alt="Alejandro" class="w-full h-full object-cover scale-150" loading="lazy" width="112" height="112">
+                    </div>
+                    <p class="font-bold text-zinc-900 text-sm">Alejandro</p>
+                    <p class="text-zinc-400 text-xs mt-0.5">
+                        <span class="lang-es">Técnico de Agua</span>
+                        <span class="lang-en">Water Technician</span>
+                    </p>
+                </div>
+
+                <!-- Amalia — Fontanería -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-2 ring-zinc-200 shadow-md mb-4 bg-zinc-50">
+                        <img src="img/quienes-somos/amalia-fontaneria.png" alt="Amalia" class="w-full h-full object-cover scale-150" loading="lazy" width="112" height="112">
+                    </div>
+                    <p class="font-bold text-zinc-900 text-sm">Amalia</p>
+                    <p class="text-zinc-400 text-xs mt-0.5">
+                        <span class="lang-es">Técnico de Agua</span>
+                        <span class="lang-en">Water Technician</span>
+                    </p>
+                </div>
+
+                <!-- Candelaria — Armado de Muebles -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-2 ring-zinc-200 shadow-md mb-4 bg-zinc-50">
+                        <img src="img/quienes-somos/candelaria-armado-de-muebles.png" alt="Candelaria" class="w-full h-full object-cover scale-150" loading="lazy" width="112" height="112">
+                    </div>
+                    <p class="font-bold text-zinc-900 text-sm">Candelaria</p>
+                    <p class="text-zinc-400 text-xs mt-0.5">
+                        <span class="lang-es">Armado de Muebles</span>
+                        <span class="lang-en">Furniture Assembly</span>
+                    </p>
+                </div>
+
+                <!-- Ana María — Decoradora -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-2 ring-zinc-200 shadow-md mb-4 bg-zinc-50">
+                        <img src="img/quienes-somos/ana-maria-decoradora.png" alt="Ana María" class="w-full h-full object-cover scale-150" loading="lazy" width="112" height="112">
+                    </div>
+                    <p class="font-bold text-zinc-900 text-sm">Ana María</p>
+                    <p class="text-zinc-400 text-xs mt-0.5">
+                        <span class="lang-es">Decoradora</span>
+                        <span class="lang-en">Decorator</span>
+                    </p>
+                </div>
+
+                <!-- Fixit — el perro de la familia -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-2 ring-orange-200 shadow-md mb-4 bg-zinc-50">
+                        <img src="img/quienes-somos/fixit.png" alt="Fixit, la mascota de Piscinas Pérez" class="w-full h-full object-cover scale-150" loading="lazy" width="112" height="112">
+                    </div>
+                    <p class="font-bold text-zinc-900 text-sm">Fixit</p>
+                    <p class="text-zinc-400 text-xs mt-0.5">
+                        <span class="lang-es">Jefe de Moral</span>
+                        <span class="lang-en">Chief Morale Officer</span>
+                    </p>
+                </div>
+
+                <!-- Miembros adicionales (ocultos por defecto) -->
+                <div id="equipo-extra" style="display: none;" class="contents">
+
+                <!-- Betty — Recepción -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-2 ring-zinc-200 shadow-md mb-4 bg-zinc-50">
+                        <img src="img/quienes-somos/betty-recepcion.png" alt="Betty" class="w-full h-full object-cover scale-150" loading="lazy" width="112" height="112">
+                    </div>
+                    <p class="font-bold text-zinc-900 text-sm">Betty</p>
+                    <p class="text-zinc-400 text-xs mt-0.5">
+                        <span class="lang-es">Recepción</span>
+                        <span class="lang-en">Reception</span>
+                    </p>
+                </div>
+
+                <!-- Carla — Contadora -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-2 ring-zinc-200 shadow-md mb-4 bg-zinc-50">
+                        <img src="img/quienes-somos/carla-contadora.png" alt="Carla" class="w-full h-full object-cover scale-150" loading="lazy" width="112" height="112">
+                    </div>
+                    <p class="font-bold text-zinc-900 text-sm">Carla</p>
+                    <p class="text-zinc-400 text-xs mt-0.5">
+                        <span class="lang-es">Contadora</span>
+                        <span class="lang-en">Accountant</span>
+                    </p>
+                </div>
+
+                <!-- Arnaldo — Paredes en Seco -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-2 ring-zinc-200 shadow-md mb-4 bg-zinc-50">
+                        <img src="img/quienes-somos/arnaldo-instalacion-paredes-en-seco.png" alt="Arnaldo" class="w-full h-full object-cover scale-150" loading="lazy" width="112" height="112">
+                    </div>
+                    <p class="font-bold text-zinc-900 text-sm">Arnaldo</p>
+                    <p class="text-zinc-400 text-xs mt-0.5">
+                        <span class="lang-es">Paredes en Seco</span>
+                        <span class="lang-en">Drywall</span>
+                    </p>
+                </div>
+
+                <!-- Alberto — Pintura -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-2 ring-zinc-200 shadow-md mb-4 bg-zinc-50">
+                        <img src="img/quienes-somos/alberto-pintura.png" alt="Alberto" class="w-full h-full object-cover scale-150" loading="lazy" width="112" height="112">
+                    </div>
+                    <p class="font-bold text-zinc-900 text-sm">Alberto</p>
+                    <p class="text-zinc-400 text-xs mt-0.5">
+                        <span class="lang-es">Especialista en Superficie</span>
+                        <span class="lang-en">Surface Specialist</span>
+                    </p>
+                </div>
+
+                <!-- Ana Laura — Muebles y Apliques -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-2 ring-zinc-200 shadow-md mb-4 bg-zinc-50">
+                        <img src="img/quienes-somos/ana-laura-muebles-y-apliques.png" alt="Ana Laura" class="w-full h-full object-cover scale-150" loading="lazy" width="112" height="112">
+                    </div>
+                    <p class="font-bold text-zinc-900 text-sm">Ana Laura</p>
+                    <p class="text-zinc-400 text-xs mt-0.5">
+                        <span class="lang-es">Muebles & Apliques</span>
+                        <span class="lang-en">Furniture & Fixtures</span>
+                    </p>
+                </div>
+
+                <!-- Carlos Alberto — Fontanería -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-2 ring-zinc-200 shadow-md mb-4 bg-zinc-50">
+                        <img src="img/quienes-somos/carlos-alberto-fontaneria.png" alt="Carlos Alberto" class="w-full h-full object-cover scale-150" loading="lazy" width="112" height="112">
+                    </div>
+                    <p class="font-bold text-zinc-900 text-sm">Carlos Alberto</p>
+                    <p class="text-zinc-400 text-xs mt-0.5">
+                        <span class="lang-es">Técnico de Agua</span>
+                        <span class="lang-en">Water Technician</span>
+                    </p>
+                </div>
+
+                <!-- João — Pisos -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-2 ring-zinc-200 shadow-md mb-4 bg-zinc-50">
+                        <img src="img/quienes-somos/joao-pisos.png" alt="João" class="w-full h-full object-cover scale-150" loading="lazy" width="112" height="112">
+                    </div>
+                    <p class="font-bold text-zinc-900 text-sm">João</p>
+                    <p class="text-zinc-400 text-xs mt-0.5">
+                        <span class="lang-es">Pisos</span>
+                        <span class="lang-en">Flooring</span>
+                    </p>
+                </div>
+
+                <!-- Pablo — Arreglos Generales -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-2 ring-zinc-200 shadow-md mb-4 bg-zinc-50">
+                        <img src="img/quienes-somos/pablo-arreglos-generales.png" alt="Pablo" class="w-full h-full object-cover scale-150" loading="lazy" width="112" height="112">
+                    </div>
+                    <p class="font-bold text-zinc-900 text-sm">Pablo</p>
+                    <p class="text-zinc-400 text-xs mt-0.5">
+                        <span class="lang-es">Arreglos Generales</span>
+                        <span class="lang-en">General Repairs</span>
+                    </p>
+                </div>
+
+                </div><!-- /equipo-extra -->
+
+            </div><!-- /grid -->
+
+            <!-- Botón Ver más / Ver menos -->
+            <div class="text-center mt-10">
+                <button onclick="toggleEquipo()" id="equipo-toggle-btn" class="inline-flex items-center gap-2 text-sm font-semibold text-zinc-600 hover:text-zinc-900 border border-zinc-200 hover:border-zinc-300 bg-white px-6 py-3 rounded-full transition-all shadow-sm hover:shadow">
+                    <span class="lang-es" id="equipo-label-es">Ver el resto del equipo</span>
+                    <span class="lang-en" id="equipo-label-en">Meet the full team</span>
+                    <iconify-icon icon="lucide:chevron-down" width="16" id="equipo-btn-icon"></iconify-icon>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Dark Footer with Contact Form & Yelp -->
+    <footer id="footer" class="bg-zinc-950 text-white border-t border-zinc-800 pt-16 pb-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
+                
+                <!-- Contact Info & Links -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="bg-white text-zinc-950 p-1 rounded-sm">
+                            <iconify-icon icon="lucide:hammer" width="14" height="14"></iconify-icon>
+                        </div>
+                        <span class="font-bold tracking-tight text-lg">MIAMIFIX</span>
+                    </div>
+                    <p class="text-zinc-400 mb-8 max-w-sm">
+                        <span class="lang-en">Family owned since 2008. Fully insured and licensed in Miami-Dade County.</span>
+                        <span class="lang-es">Propiedad familiar desde 2008. Totalmente asegurados y con licencia en Miami-Dade.</span>
+                    </p>
+                    
+                    <div class="flex gap-6 mb-8">
+                         <!-- Yelp Link -->
+                        <a href="#" class="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors">
+                            <iconify-icon icon="logos:yelp" width="20"></iconify-icon>
+                            <span class="text-sm font-medium">Check us on Yelp</span>
+                        </a>
+                    </div>
+                    
+                    <div class="flex gap-4">
+                        <a href="#" class="text-zinc-400 hover:text-white transition-colors" aria-label="Instagram"><iconify-icon icon="lucide:instagram" width="20"></iconify-icon></a>
+                        <a href="#" class="text-zinc-400 hover:text-white transition-colors" aria-label="Facebook"><iconify-icon icon="lucide:facebook" width="20"></iconify-icon></a>
+                        <a href="#" class="text-zinc-400 hover:text-white transition-colors" aria-label="Email"><iconify-icon icon="lucide:mail" width="20"></iconify-icon></a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-zinc-900 p-8 rounded-2xl border border-zinc-800">
+                    <h3 class="text-lg font-bold mb-4">
+                        <span class="lang-en">Have questions?</span>
+                        <span class="lang-es">¿Tienes preguntas?</span>
+                    </h3>
+                    <form name="contacto-miami" method="POST" data-netlify="true" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="contact-name" class="sr-only">Name / Nombre</label>
+                                <input id="contact-name" name="nombre" type="text" placeholder="Name / Nombre" autocomplete="name" class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-all">
+                            </div>
+                            <div>
+                                <label for="contact-phone" class="sr-only">Phone / Teléfono</label>
+                                <input id="contact-phone" name="telefono" type="tel" placeholder="Phone / Teléfono" autocomplete="tel" class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-all">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="contact-message" class="sr-only">Message / Mensaje</label>
+                            <textarea id="contact-message" name="mensaje" rows="3" placeholder="How can we help? / ¿Cómo podemos ayudar?" class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-all"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-white text-zinc-950 font-bold py-3 rounded-lg hover:bg-zinc-200 transition-colors">
+                            <span class="lang-en">Send Message</span>
+                            <span class="lang-es">Enviar Mensaje</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-zinc-900 pt-8 text-center text-xs text-zinc-500">
+                © 2025 Piscinas Pérez Services. Family owned &amp; operated.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+         JS SLIDER TRABAJOS
+         Lee las .trabajos-card dinámicamente del DOM.
+         Agregar nuevas cards en HTML es suficiente — no editar este script.
+         ============================================================ -->
+    <script>
+    (function () {
+        var GAP = 24; // px — equivale al gap: 24px del track
+        var currentIndex = 0;
+        var startX = 0;
+        var isDragging = false;
+
+        var track      = document.getElementById('trabajos-track');
+        var dotsWrap   = document.getElementById('trabajos-dots');
+        var btnPrev    = document.getElementById('trabajos-prev');
+        var btnNext    = document.getElementById('trabajos-next');
+        var cards      = Array.from(track.querySelectorAll('.trabajos-card'));
+
+        // Devuelve cuántas cards son visibles según el ancho actual de pantalla
+        function getItemsPerPage() {
+            if (window.innerWidth >= 1024) return 3; // desktop
+            if (window.innerWidth >= 640)  return 2; // tablet
+            return 1;                                 // mobile
+        }
+
+        // Ancho exacto de cada card (descontando gaps)
+        function getCardWidth() {
+            var n = getItemsPerPage();
+            var containerW = track.parentElement.offsetWidth;
+            return (containerW - GAP * (n - 1)) / n;
+        }
+
+        // Aplica el ancho calculado a cada card
+        function updateCardWidths() {
+            var w = getCardWidth();
+            cards.forEach(function (c) { c.style.width = w + 'px'; });
+        }
+
+        // Índice máximo que permite que no queden huecos vacíos
+        function maxIndex() {
+            return Math.max(0, cards.length - getItemsPerPage());
+        }
+
+        // Navega al índice indicado
+        function goTo(index) {
+            currentIndex = Math.max(0, Math.min(index, maxIndex()));
+            var offset = currentIndex * (getCardWidth() + GAP);
+            track.style.transform = 'translateX(-' + offset + 'px)';
+            renderDots();
+            renderButtons();
+        }
+
+        // Renderiza los dots según el estado actual
+        function renderDots() {
+            var total = maxIndex() + 1;
+            dotsWrap.innerHTML = '';
+            for (var i = 0; i < total; i++) {
+                var dot = document.createElement('button');
+                var isActive = i === currentIndex;
+                dot.className = 'h-2 rounded-full transition-all duration-300 ' +
+                    (isActive ? 'bg-blue-600 w-6' : 'bg-zinc-300 w-2');
+                dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+                (function (idx) {
+                    dot.addEventListener('click', function () { goTo(idx); });
+                })(i);
+                dotsWrap.appendChild(dot);
+            }
+        }
+
+        // Activa / desactiva los botones según posición
+        function renderButtons() {
+            btnPrev.disabled = currentIndex === 0;
+            btnNext.disabled = currentIndex >= maxIndex();
+        }
+
+        // ── Botones ────────────────────────────────────────────────
+        btnPrev.addEventListener('click', function () { goTo(currentIndex - 1); });
+        btnNext.addEventListener('click', function () { goTo(currentIndex + 1); });
+
+        // ── Swipe táctil ───────────────────────────────────────────
+        track.addEventListener('touchstart', function (e) {
+            startX = e.touches[0].clientX;
+            isDragging = true;
+        }, { passive: true });
+
+        track.addEventListener('touchend', function (e) {
+            if (!isDragging) return;
+            var diff = startX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 40) goTo(currentIndex + (diff > 0 ? 1 : -1));
+            isDragging = false;
+        });
+
+        // ── Teclado ← → (NO actúa si el foco está en un campo de formulario) ──
+        document.addEventListener('keydown', function (e) {
+            var tag = document.activeElement && document.activeElement.tagName;
+            if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+            if (e.key === 'ArrowLeft')  goTo(currentIndex - 1);
+            if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+        });
+
+        // ── Resize (recalcula anchos y revalida posición) ──────────
+        var resizeTimer;
+        window.addEventListener('resize', function () {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function () {
+                updateCardWidths();
+                goTo(Math.min(currentIndex, maxIndex()));
+            }, 150);
+        });
+
+        // ── Init ────────────────────────────────────────────────────
+        updateCardWidths();
+        goTo(0);
+    })();
+    </script>
+
+    <!-- WhatsApp Sticky Floating Button -->
+    <a href="https://wa.me/34623282101" class="fixed bottom-6 right-6 z-50 group shadow-2xl shadow-green-600/30 rounded-full" aria-label="Chat with us on WhatsApp">
+        <span class="absolute -top-1 -right-1 flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+        </span>
+        <div class="bg-[#25D366] text-white p-4 rounded-full flex items-center gap-3 hover:bg-[#20bd5a] transition-all hover:scale-105">
+            <iconify-icon icon="lucide:message-circle" width="24" height="24"></iconify-icon>
+            <div class="hidden sm:block">
+                <span class="font-bold text-sm pr-1 lang-en-block">Chat on WhatsApp</span>
+                <span class="font-bold text-sm pr-1 lang-es-block">Chat en WhatsApp</span>
+            </div>
+        </div>
+    </a>
+
+
+</body></html>

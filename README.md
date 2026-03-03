@@ -1,21 +1,33 @@
 # piscinas-perez
-🏊 Piscinas Pérez &amp; Co - Professional Bilingual Pool Services Landing
+🏊 Piscinas Pérez - Professional Pool Services Landing Page
 
-Complete professional landing page for Piscinas Pérez & Co with:
-- 100% bilingual (EN/ES)
-- Mobile-first responsive design
-- WhatsApp 24/7 floating button
-- Google Business integration (4.9/5 reviews)
-- Pool-specific contact form
-- SEO optimized
-- 6 service offerings + pricing plans
-- Before/after gallery
-- FAQ section
-- Professional branding
+A premium, bilingual landing page for a family-owned pool services company in the USA. Built on a proven Miami Fix handyman template, adapted specifically for pool maintenance, repairs, cleaning, and renovations.
 
-Ready for production. Update placeholders:
-- Phone number
-- Email
-- WhatsApp number
-- Real before/after images
-- Real testimonials
+## Features
+- ✅ 100% bilingual (English/Spanish) - Latino-focused
+- ✅ Mobile-first responsive design (Tailwind CSS)
+- ✅ WhatsApp integration for instant contact
+- ✅ Professional service showcase with before/after gallery
+- ✅ Bilingual team directory
+- ✅ Flexible pricing plans (One-Time, Weekly Maintenance, Pool Owner Plan)
+- ✅ Customer testimonials carousel
+- ✅ FAQ section (expanded for pool-specific questions)
+- ✅ SEO optimized meta tags
+- ✅ Modern, professional design suitable for USA market
+
+## Services Highlighted
+- Pool maintenance & cleaning
+- Equipment repair & installation
+- Chemical balancing & testing
+- Seasonal opening & closing
+- Emergency repairs (24-hour response)
+
+## Customization Needed
+Before deploying, update:
+- Phone number & WhatsApp link
+- Company email
+- Team member names & photos
+- Real before/after pool images
+- Customer testimonials
+- Service area (currently generic USA)
+- Pricing (adjust for your market)
