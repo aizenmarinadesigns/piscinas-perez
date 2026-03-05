@@ -260,72 +260,115 @@ tailwind.config = {
     </div>
 
     <!-- Hero Section -->
-    <header class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+    <header class="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900">
+        <!-- Decorative background elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        </div>
+
         <div class="max-w-6xl mx-auto px-6 relative z-10">
-            <div class="flex flex-col lg:flex-row gap-16 items-center">
-                
+            <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+
                 <!-- Hero Copy -->
                 <div class="lg:w-1/2">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-50 border border-green-200 text-xs font-bold text-green-700 mb-6">
+                    <!-- Credibility Badge -->
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-400/50 text-xs font-bold text-cyan-100 mb-8 backdrop-blur-sm">
                         <span class="relative flex h-2 w-2">
-                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                          <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                          <span class="animate-pulse absolute inline-flex h-full w-full rounded-full bg-cyan-300 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-400"></span>
                         </span>
-                        <span class="lang-en">Online &amp; Ready to Dispatch</span>
-                        <span class="lang-es">En línea y listos para ir</span>
+                        <span class="lang-en">Family-Owned • 30+ Years Trusted</span>
+                        <span class="lang-es">Negocio Familiar • 30+ Años de Confianza</span>
                     </div>
-                    
-                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-manrope font-bold text-zinc-900 tracking-tight leading-[1.1] mb-6 group cursor-default">
-                        <span class="lang-en">Your Oasis Awaits.<br><span class="highlight-text text-blue-900">Pool perfection starts here.</span></span>
-                        <span class="lang-es">Tu Oasis te espera.<br><span class="highlight-text text-blue-900">La piscina perfecta comienza aquí.</span></span>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-manrope font-bold text-white tracking-tight leading-[1.15] mb-6">
+                        <span class="lang-en">Professional Pool Service<br><span class="bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">Your Family Deserves</span></span>
+                        <span class="lang-es">Servicio Profesional de Piscina<br><span class="bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">Que Tu Familia Merece</span></span>
                     </h1>
 
-                    <p class="text-lg text-zinc-600 mb-8 max-w-lg leading-relaxed">
-                        <span class="lang-en">Your pool isn't just a backyard feature—it's where your best moments happen. We keep it crystal clear, running smoothly, and always ready for your family. Whether it's weekly maintenance, emergency repairs, or a complete transformation, we show up like we're protecting our own. <span class="font-semibold text-zinc-900">Because your peace of mind matters.</span></span>
-                        <span class="lang-es">Tu piscina no es solo un espacio en el patio—es donde suceden tus mejores momentos. La mantenemos cristalina, funcionando perfectamente, y lista para tu familia. Desde mantenimiento semanal hasta emergencias o transformaciones completas, nos presentamos como si estuviéramos protegiendo la nuestra. <span class="font-semibold text-zinc-900">Porque tu tranquilidad importa.</span></span>
+                    <p class="text-lg text-cyan-100/90 mb-8 max-w-lg leading-relaxed">
+                        <span class="lang-en">Maintenance. Repairs. Cleaning. Renovations. We've been keeping Miami pools crystal clear for three decades. Fast service. Fair pricing. Bilingual team. No surprises.</span>
+                        <span class="lang-es">Mantenimiento. Reparaciones. Limpieza. Renovaciones. Llevamos 30 años manteniendo piscinas cristalinas en Miami. Servicio rápido. Precios justos. Equipo bilingüe. Sin sorpresas.</span>
                     </p>
 
-                    <!-- Urgent Action Block -->
-                    <div class="bg-red-50 border border-red-100 rounded-xl p-5 mb-8 flex items-start gap-4 max-w-md shadow-sm">
-                        <div class="bg-red-100 text-red-600 p-2 rounded-lg shrink-0">
-                            <iconify-icon icon="lucide:siren" width="24"></iconify-icon>
+                    <!-- Trust Badges Row -->
+                    <div class="grid grid-cols-2 gap-3 mb-10">
+                        <!-- Badge 1: Google Reviews -->
+                        <div class="bg-white/10 backdrop-blur border border-white/20 rounded-lg p-3 flex items-center gap-3">
+                            <div class="flex gap-0.5 text-yellow-300">
+                                <iconify-icon icon="lucide:star" width="14" class="fill-current"></iconify-icon>
+                                <iconify-icon icon="lucide:star" width="14" class="fill-current"></iconify-icon>
+                                <iconify-icon icon="lucide:star" width="14" class="fill-current"></iconify-icon>
+                                <iconify-icon icon="lucide:star" width="14" class="fill-current"></iconify-icon>
+                                <iconify-icon icon="lucide:star" width="14" class="fill-current"></iconify-icon>
+                            </div>
+                            <div class="text-sm">
+                                <p class="font-bold text-white text-sm">4.9<span class="text-cyan-300">/5</span></p>
+                                <p class="text-xs text-cyan-200/70"><span class="lang-en">478 Reviews</span><span class="lang-es">478 Reseñas</span></p>
+                            </div>
                         </div>
-                        <div>
-                            <h3 class="text-sm font-bold text-red-900">
-                                <span class="lang-en">Pool emergency?</span>
-                                <span class="lang-es">¿Emergencia de piscina?</span>
-                            </h3>
-                            <p class="text-sm text-red-800/80 mt-1 leading-snug">
-                                <span class="lang-en">Pump failure? Cloudy water? Equipment broken? We respond within <span class="font-bold underline">24 hours</span>.</span>
-                                <span class="lang-es">¿Falla de bomba? ¿Agua turbia? ¿Equipo dañado? Respondemos en <span class="font-bold underline">menos de 24 horas</span>.</span>
-                            </p>
-                            <a href="https://wa.me/34623282101?text=Emergency" class="inline-flex items-center gap-2 mt-3 text-xs font-bold bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors shadow-red-500/20 shadow-lg">
-                                <span class="lang-en">Request Urgent Dispatch ($99 fee)</span>
-                                <span class="lang-es">Pedir Envío Urgente ($99 tarifa)</span>
-                                <iconify-icon icon="lucide:arrow-right" width="12"></iconify-icon>
-                            </a>
+
+                        <!-- Badge 2: Happy Families -->
+                        <div class="bg-white/10 backdrop-blur border border-white/20 rounded-lg p-3 flex items-center gap-3">
+                            <iconify-icon icon="lucide:users" width="24" class="text-cyan-300"></iconify-icon>
+                            <div class="text-sm">
+                                <p class="font-bold text-white text-sm">1,200+</p>
+                                <p class="text-xs text-cyan-200/70"><span class="lang-en">Happy Families</span><span class="lang-es">Familias Satisfechas</span></p>
+                            </div>
+                        </div>
+
+                        <!-- Badge 3: Licensed & Insured -->
+                        <div class="bg-white/10 backdrop-blur border border-white/20 rounded-lg p-3 flex items-center gap-3">
+                            <iconify-icon icon="lucide:shield-check" width="24" class="text-green-300"></iconify-icon>
+                            <div class="text-sm">
+                                <p class="font-bold text-white text-sm"><span class="lang-en">Licensed</span><span class="lang-es">Licenciado</span></p>
+                                <p class="text-xs text-cyan-200/70"><span class="lang-en">&amp; Insured</span><span class="lang-es">&amp; Asegurado</span></p>
+                            </div>
+                        </div>
+
+                        <!-- Badge 4: 24/7 Response -->
+                        <div class="bg-white/10 backdrop-blur border border-white/20 rounded-lg p-3 flex items-center gap-3">
+                            <iconify-icon icon="lucide:clock" width="24" class="text-orange-300"></iconify-icon>
+                            <div class="text-sm">
+                                <p class="font-bold text-white text-sm">24/7</p>
+                                <p class="text-xs text-cyan-200/70"><span class="lang-en">Emergency</span><span class="lang-es">Emergencia</span></p>
+                            </div>
                         </div>
                     </div>
 
+                    <!-- CTA Buttons -->
                     <div class="flex flex-col sm:flex-row items-center gap-4">
-                        <a href="#plans" class="w-full sm:w-auto px-8 py-4 bg-cyan-600 text-white text-sm font-semibold rounded-xl hover:bg-cyan-700 transition-all flex items-center justify-center gap-2 shadow-xl shadow-cyan-600/20">
-                            <span class="lang-en">Request Service</span>
-                            <span class="lang-es">Solicitar Servicio</span>
+                        <a href="#plans" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-cyan-400 to-cyan-500 text-slate-900 text-sm font-bold rounded-xl hover:from-cyan-300 hover:to-cyan-400 transition-all flex items-center justify-center gap-2 shadow-2xl shadow-cyan-500/40 hover:shadow-cyan-500/60 hover:-translate-y-1">
+                            <span class="lang-en">Request Free Estimate</span>
+                            <span class="lang-es">Solicitar Presupuesto Gratis</span>
+                            <iconify-icon icon="lucide:arrow-right" width="16"></iconify-icon>
                         </a>
-                        <a href="#trabajos" class="w-full sm:w-auto px-8 py-4 bg-white border border-cyan-200 text-cyan-700 text-sm font-semibold rounded-xl hover:bg-cyan-50 transition-all flex items-center justify-center">
-                            <span class="lang-en">View Our Portfolio</span>
-                            <span class="lang-es">Ver Nuestro Portafolio</span>
+                        <a href="tel:+1305555XXXX" class="w-full sm:w-auto px-8 py-4 bg-white/10 border border-white/30 text-white text-sm font-semibold rounded-xl hover:bg-white/20 transition-all flex items-center justify-center gap-2 backdrop-blur">
+                            <iconify-icon icon="lucide:phone" width="16"></iconify-icon>
+                            <span class="lang-en">Call Now</span>
+                            <span class="lang-es">Llamar Ahora</span>
                         </a>
                     </div>
                 </div>
 
                 <!-- Hero Image -->
                 <div class="lg:w-1/2 relative">
-                    <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-blue-900/10 aspect-[4/5] lg:aspect-square">
-                        <img src="https://images.pexels.com/photos/1695182/pexels-photo-1695182.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Luxury swimming pool in Miami" class="w-full h-full object-cover" loading="lazy" width="600" height="600">
+                    <!-- Main Image with Badge -->
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl shadow-cyan-500/30 aspect-[3/4] lg:aspect-[4/5] group">
+                        <img src="https://images.pexels.com/photos/1695182/pexels-photo-1695182.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Luxury swimming pool maintenance in Miami" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="600" height="600">
+
+                        <!-- Badge: Since 1994 -->
+                        <div class="absolute top-6 right-6 bg-black/40 backdrop-blur-md border border-white/30 text-white px-4 py-2 rounded-full text-sm font-bold flex items-center gap-2">
+                            <iconify-icon icon="lucide:award" width="18" class="text-yellow-300"></iconify-icon>
+                            <span class="lang-en">Since 1994</span>
+                            <span class="lang-es">Desde 1994</span>
+                        </div>
                     </div>
-                    <div class="mt-4 w-full bg-white/95 backdrop-blur p-4 rounded-xl border border-zinc-200 shadow-lg flex items-start gap-4">
-                        <div class="flex gap-0.5 text-orange-400 shrink-0 mt-0.5">
+
+                    <!-- Testimonial Card Below -->
+                    <div class="mt-6 w-full bg-white/95 backdrop-blur p-5 rounded-2xl border border-white/20 shadow-2xl shadow-cyan-900/20 flex items-start gap-4">
+                        <div class="flex gap-0.5 text-yellow-400 shrink-0 mt-1">
                             <iconify-icon icon="lucide:star" width="16" class="fill-current"></iconify-icon>
                             <iconify-icon icon="lucide:star" width="16" class="fill-current"></iconify-icon>
                             <iconify-icon icon="lucide:star" width="16" class="fill-current"></iconify-icon>
@@ -333,11 +376,15 @@ tailwind.config = {
                             <iconify-icon icon="lucide:star" width="16" class="fill-current"></iconify-icon>
                         </div>
                         <div>
-                            <p class="text-sm font-medium text-zinc-800">
-                                <span class="lang-en">"My pool has never looked better. Crystal clear water, perfectly balanced, every single week."</span>
-                                <span class="lang-es">"Mi piscina nunca se ha visto mejor. Agua cristalina, perfectamente equilibrada, cada semana."</span>
+                            <p class="text-sm font-semibold text-slate-900">
+                                <span class="lang-en">"They treat your pool like it's their own. Best decision ever."</span>
+                                <span class="lang-es">"Tratan tu piscina como si fuera la suya. Mejor decisión de mi vida."</span>
                             </p>
-                            <p class="text-xs text-zinc-400 mt-1 font-bold uppercase tracking-wider">- Sarah M., Coral Gables</p>
+                            <p class="text-xs text-slate-500 mt-2 font-bold uppercase tracking-wider">
+                                <iconify-icon icon="lucide:map-pin" width="12" class="inline mr-1"></iconify-icon>
+                                <span class="lang-en">Carlos V., Miami Beach</span>
+                                <span class="lang-es">Carlos V., Miami Beach</span>
+                            </p>
                         </div>
                     </div>
                 </div>
