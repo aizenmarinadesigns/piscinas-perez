@@ -259,19 +259,21 @@ tailwind.config = {
         </nav>
     </div>
 
-    <!-- Hero Section -->
-    <header class="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900">
-        <!-- Decorative background elements -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none">
-            <div class="absolute top-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-        </div>
+    <!-- Hero Section with Video Background -->
+    <header class="relative w-full h-screen flex items-center justify-center overflow-hidden">
+        <!-- Video Background -->
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+            <source src="https://cdn.pixabay.com/video/2021/09/23/88230-612726833_tiny.mp4" type="video/mp4">
+        </video>
 
-        <div class="max-w-6xl mx-auto px-6 relative z-10">
-            <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-blue-900/50 to-cyan-900/60"></div>
 
-                <!-- Hero Copy -->
-                <div class="lg:w-1/2">
+        <!-- Content -->
+        <div class="relative z-10 w-full">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="flex flex-col items-start justify-center max-w-2xl">
+
                     <!-- Credibility Badge -->
                     <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-400/50 text-xs font-bold text-cyan-100 mb-8 backdrop-blur-sm">
                         <span class="relative flex h-2 w-2">
@@ -282,18 +284,18 @@ tailwind.config = {
                         <span class="lang-es">Negocio Familiar • 30+ Años de Confianza</span>
                     </div>
 
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-manrope font-bold text-white tracking-tight leading-[1.15] mb-6">
+                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-manrope font-bold text-white tracking-tight leading-[1.1] mb-6">
                         <span class="lang-en">Professional Pool Service<br><span class="bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">Your Family Deserves</span></span>
                         <span class="lang-es">Servicio Profesional de Piscina<br><span class="bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">Que Tu Familia Merece</span></span>
                     </h1>
 
-                    <p class="text-lg text-cyan-100/90 mb-8 max-w-lg leading-relaxed">
+                    <p class="text-lg text-cyan-100/90 mb-8 max-w-2xl leading-relaxed">
                         <span class="lang-en">Maintenance. Repairs. Cleaning. Renovations. We've been keeping Miami pools crystal clear for three decades. Fast service. Fair pricing. Bilingual team. No surprises.</span>
                         <span class="lang-es">Mantenimiento. Reparaciones. Limpieza. Renovaciones. Llevamos 30 años manteniendo piscinas cristalinas en Miami. Servicio rápido. Precios justos. Equipo bilingüe. Sin sorpresas.</span>
                     </p>
 
                     <!-- Trust Badges Row -->
-                    <div class="grid grid-cols-2 gap-3 mb-10">
+                    <div class="grid grid-cols-2 gap-3 mb-10 max-w-xl">
                         <!-- Badge 1: Google Reviews -->
                         <div class="bg-white/10 backdrop-blur border border-white/20 rounded-lg p-3 flex items-center gap-3">
                             <div class="flex gap-0.5 text-yellow-300">
@@ -349,43 +351,6 @@ tailwind.config = {
                             <span class="lang-en">Call Now</span>
                             <span class="lang-es">Llamar Ahora</span>
                         </a>
-                    </div>
-                </div>
-
-                <!-- Hero Image -->
-                <div class="lg:w-1/2 relative">
-                    <!-- Main Image with Badge -->
-                    <div class="relative rounded-3xl overflow-hidden shadow-2xl shadow-cyan-500/30 aspect-[3/4] lg:aspect-[4/5] group">
-                        <img src="img/piscinas-perez-hero.png" alt="Piscinas Pérez family" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="600" height="600">
-
-                        <!-- Badge: Since 1994 -->
-                        <div class="absolute top-6 right-6 bg-black/40 backdrop-blur-md border border-white/30 text-white px-4 py-2 rounded-full text-sm font-bold flex items-center gap-2">
-                            <iconify-icon icon="lucide:award" width="18" class="text-yellow-300"></iconify-icon>
-                            <span class="lang-en">Since 1994</span>
-                            <span class="lang-es">Desde 1994</span>
-                        </div>
-                    </div>
-
-                    <!-- Testimonial Card Below -->
-                    <div class="mt-6 w-full bg-white/95 backdrop-blur p-5 rounded-2xl border border-white/20 shadow-2xl shadow-cyan-900/20 flex items-start gap-4">
-                        <div class="flex gap-0.5 text-yellow-400 shrink-0 mt-1">
-                            <iconify-icon icon="lucide:star" width="16" class="fill-current"></iconify-icon>
-                            <iconify-icon icon="lucide:star" width="16" class="fill-current"></iconify-icon>
-                            <iconify-icon icon="lucide:star" width="16" class="fill-current"></iconify-icon>
-                            <iconify-icon icon="lucide:star" width="16" class="fill-current"></iconify-icon>
-                            <iconify-icon icon="lucide:star" width="16" class="fill-current"></iconify-icon>
-                        </div>
-                        <div>
-                            <p class="text-sm font-semibold text-slate-900">
-                                <span class="lang-en">"They treat your pool like it's their own. Best decision ever."</span>
-                                <span class="lang-es">"Tratan tu piscina como si fuera la suya. Mejor decisión de mi vida."</span>
-                            </p>
-                            <p class="text-xs text-slate-500 mt-2 font-bold uppercase tracking-wider">
-                                <iconify-icon icon="lucide:map-pin" width="12" class="inline mr-1"></iconify-icon>
-                                <span class="lang-en">Carlos V., Miami Beach</span>
-                                <span class="lang-es">Carlos V., Miami Beach</span>
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>
