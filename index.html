@@ -190,9 +190,9 @@ tailwind.config = {
                     <span class="lang-en">Our Work</span>
                     <span class="lang-es">Trabajos</span>
                 </a>
-                <a href="#promise" class="hover:text-blue-600 transition-colors">
-                    <span class="lang-en">The Promise</span>
-                    <span class="lang-es">La Promesa</span>
+                <a href="#servicios" class="hover:text-blue-600 transition-colors">
+                    <span class="lang-en">Services</span>
+                    <span class="lang-es">Servicios</span>
                 </a>
                 <a href="#plans" class="hover:text-blue-600 transition-colors">
                     <span class="lang-en">Plans</span>
@@ -763,58 +763,138 @@ tailwind.config = {
     </section>
 
     <!-- The Clean Promise -->
-    <section id="promise" class="py-20 bg-zinc-50 border-y border-zinc-200">
+    <section id="servicios" class="py-24 bg-white border-b border-zinc-200">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <h2 class="text-3xl font-manrope font-bold text-zinc-900 mb-4">
-                    <span class="lang-en">The Crystal Clear Promise</span>
-                    <span class="lang-es">La Promesa de Agua Cristalina</span>
+                    <span class="lang-en">Services We Offer</span>
+                    <span class="lang-es">Servicios que Ofrecemos</span>
                 </h2>
-                <p class="text-zinc-500">
-                    <span class="lang-en">Most pool companies just maintain the basics. We believe your pool should be a sparkling oasis — crystal clear water, perfectly balanced, and maintained to perfection.</span>
-                    <span class="lang-es">La mayoría de las compañías solo mantienen lo básico. Creemos que su piscina debe ser un oasis de esplendor: agua cristalina, perfectamente equilibrada y mantenida a la perfección.</span>
+                <p class="text-zinc-600">
+                    <span class="lang-en">From routine maintenance to complete renovations. We handle every aspect of pool care with expert precision.</span>
+                    <span class="lang-es">Desde mantenimiento rutinario hasta renovaciones completas. Manejamos cada aspecto del cuidado de piscinas con precisión experta.</span>
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 flex flex-col items-center text-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1: Maintenance -->
+                <div class="bg-white border border-zinc-200 rounded-2xl p-8 flex flex-col hover:shadow-lg transition-shadow">
                     <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-6">
-                        <iconify-icon icon="lucide:footprints" width="24"></iconify-icon>
+                        <iconify-icon icon="lucide:wrench" width="24"></iconify-icon>
                     </div>
-                    <h3 class="font-bold text-zinc-900 mb-2">
-                        <span class="lang-en">Crystal Clear Water Guaranteed</span>
-                        <span class="lang-es">Agua Cristalina Garantizada</span>
+                    <h3 class="font-bold text-zinc-900 mb-3">
+                        <span class="lang-en">Weekly Maintenance</span>
+                        <span class="lang-es">Mantenimiento Semanal</span>
                     </h3>
-                    <p class="text-sm text-zinc-500">
-                        <span class="lang-en">We test your water chemistry daily and balance it perfectly. No cloudy water, no algae, no guessing games — just crystal clear water, every single day.</span>
-                        <span class="lang-es">Probamos la química del agua diariamente y la equilibramos perfectamente. Sin agua turbia, sin algas, sin conjeturas — solo agua cristalina, cada día.</span>
+                    <p class="text-sm text-zinc-600 mb-6 flex-grow">
+                        <span class="lang-en">Water testing, chemical balancing, filter cleaning, and equipment checks every week.</span>
+                        <span class="lang-es">Pruebas de agua, equilibrio químico, limpieza de filtros y verificación de equipos cada semana.</span>
                     </p>
+                    <a href="#contacto" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+                        <span class="lang-en">Schedule Now</span>
+                        <span class="lang-es">Programar</span>
+                        <iconify-icon icon="lucide:arrow-right" width="16"></iconify-icon>
+                    </a>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 flex flex-col items-center text-center">
+
+                <!-- Service 2: Repairs -->
+                <div class="bg-white border border-zinc-200 rounded-2xl p-8 flex flex-col hover:shadow-lg transition-shadow">
                     <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-6">
-                        <iconify-icon icon="lucide:sparkles" width="24"></iconify-icon>
+                        <iconify-icon icon="lucide:hammer" width="24"></iconify-icon>
                     </div>
-                    <h3 class="font-bold text-zinc-900 mb-2">
-                        <span class="lang-en">Your Pool, Well-Maintained</span>
-                        <span class="lang-es">Tu Piscina, Bien Mantenida</span>
+                    <h3 class="font-bold text-zinc-900 mb-3">
+                        <span class="lang-en">Emergency Repairs</span>
+                        <span class="lang-es">Reparaciones de Emergencia</span>
                     </h3>
-                    <p class="text-sm text-zinc-500">
-                        <span class="lang-en">We don't just skim leaves. We maintain filters, brushes walls, vacuums the floor, and check every component. Your pool gets the full treatment every visit.</span>
-                        <span class="lang-es">No solo sacamos hojas. Mantenemos filtros, limpiamos paredes, limpiamos el fondo y revisamos cada componente. Su piscina recibe tratamiento completo en cada visita.</span>
+                    <p class="text-sm text-zinc-600 mb-6 flex-grow">
+                        <span class="lang-en">Pump failures, filter issues, leaks — same-day service available. Fast, reliable fixes.</span>
+                        <span class="lang-es">Fallas de bombas, problemas de filtros, fugas — servicio disponible el mismo día. Reparaciones rápidas y confiables.</span>
                     </p>
+                    <a href="#contacto" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+                        <span class="lang-en">Request Service</span>
+                        <span class="lang-es">Solicitar Servicio</span>
+                        <iconify-icon icon="lucide:arrow-right" width="16"></iconify-icon>
+                    </a>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 flex flex-col items-center text-center">
+
+                <!-- Service 3: Deep Cleaning -->
+                <div class="bg-white border border-zinc-200 rounded-2xl p-8 flex flex-col hover:shadow-lg transition-shadow">
                     <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-6">
-                        <iconify-icon icon="lucide:shield-check" width="24"></iconify-icon>
+                        <iconify-icon icon="lucide:spray-can" width="24"></iconify-icon>
                     </div>
-                    <h3 class="font-bold text-zinc-900 mb-2">
-                        <span class="lang-en">Expert & Fully Insured</span>
-                        <span class="lang-es">Expertos y Completamente Asegurados</span>
+                    <h3 class="font-bold text-zinc-900 mb-3">
+                        <span class="lang-en">Deep Cleaning</span>
+                        <span class="lang-es">Limpieza Profunda</span>
                     </h3>
-                    <p class="text-sm text-zinc-500">
-                        <span class="lang-en">Every technician is certified in pool chemistry and equipment maintenance. We carry full liability insurance, so you can relax knowing your pool is in expert hands.</span>
-                        <span class="lang-es">Cada técnico está certificado en química de piscinas y mantenimiento de equipos. Tenemos seguro de responsabilidad civil completo, así que puedes relajarte sabiendo que tu piscina está en manos expertas.</span>
+                    <p class="text-sm text-zinc-600 mb-6 flex-grow">
+                        <span class="lang-en">Algae removal, acid wash, tile cleaning. We bring your pool back to crystal clear condition.</span>
+                        <span class="lang-es">Eliminación de algas, limpieza ácida, limpieza de azulejos. Devolvemos tu piscina a condición cristalina.</span>
                     </p>
+                    <a href="#contacto" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+                        <span class="lang-en">Get Estimate</span>
+                        <span class="lang-es">Obtener Presupuesto</span>
+                        <iconify-icon icon="lucide:arrow-right" width="16"></iconify-icon>
+                    </a>
+                </div>
+
+                <!-- Service 4: Renovations -->
+                <div class="bg-white border border-zinc-200 rounded-2xl p-8 flex flex-col hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-6">
+                        <iconify-icon icon="lucide:home" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="font-bold text-zinc-900 mb-3">
+                        <span class="lang-en">Pool Renovations</span>
+                        <span class="lang-es">Renovaciones de Piscina</span>
+                    </h3>
+                    <p class="text-sm text-zinc-600 mb-6 flex-grow">
+                        <span class="lang-en">Equipment upgrades, replastering, new decking. Complete pool transformations handled professionally.</span>
+                        <span class="lang-es">Actualización de equipos, revestimiento nuevo, terraza nueva. Transformaciones completas de piscinas manejadas profesionalmente.</span>
+                    </p>
+                    <a href="#contacto" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+                        <span class="lang-en">Consult Us</span>
+                        <span class="lang-es">Consultar</span>
+                        <iconify-icon icon="lucide:arrow-right" width="16"></iconify-icon>
+                    </a>
+                </div>
+
+                <!-- Service 5: Opening & Closing -->
+                <div class="bg-white border border-zinc-200 rounded-2xl p-8 flex flex-col hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-6">
+                        <iconify-icon icon="lucide:calendar" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="font-bold text-zinc-900 mb-3">
+                        <span class="lang-en">Seasonal Opening & Closing</span>
+                        <span class="lang-es">Apertura y Cierre de Temporada</span>
+                    </h3>
+                    <p class="text-sm text-zinc-600 mb-6 flex-grow">
+                        <span class="lang-en">Professional winterization and spring startup. Don't let your pool sit—we handle everything.</span>
+                        <span class="lang-es">Winterización profesional e inicio de primavera. No dejes tu piscina abandonada—nosotros manejamos todo.</span>
+                    </p>
+                    <a href="#contacto" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+                        <span class="lang-en">Book Service</span>
+                        <span class="lang-es">Reservar</span>
+                        <iconify-icon icon="lucide:arrow-right" width="16"></iconify-icon>
+                    </a>
+                </div>
+
+                <!-- Service 6: Equipment Installation -->
+                <div class="bg-white border border-zinc-200 rounded-2xl p-8 flex flex-col hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-6">
+                        <iconify-icon icon="lucide:zap" width="24"></iconify-icon>
+                    </div>
+                    <h3 class="font-bold text-zinc-900 mb-3">
+                        <span class="lang-en">Equipment Installation</span>
+                        <span class="lang-es">Instalación de Equipos</span>
+                    </h3>
+                    <p class="text-sm text-zinc-600 mb-6 flex-grow">
+                        <span class="lang-en">New pumps, filters, heaters, salt systems. Expert installation with full warranty coverage.</span>
+                        <span class="lang-es">Nuevas bombas, filtros, calentadores, sistemas de sal. Instalación experta con cobertura de garantía completa.</span>
+                    </p>
+                    <a href="#contacto" class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+                        <span class="lang-en">Get Quote</span>
+                        <span class="lang-es">Obtener Cotización</span>
+                        <iconify-icon icon="lucide:arrow-right" width="16"></iconify-icon>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1664,14 +1744,23 @@ tailwind.config = {
     </section>
 
     <!-- Contact Section -->
-    <section id="contacto" class="py-24 bg-zinc-50 border-t border-zinc-100">
+    <section id="contacto" class="py-24 bg-gradient-to-b from-white to-blue-50 border-t border-zinc-200">
         <div class="max-w-4xl mx-auto px-6">
+            <!-- Decorative divider -->
+            <div class="flex items-center gap-4 mb-16">
+                <div class="flex-grow h-px bg-gradient-to-r from-transparent via-zinc-300 to-transparent"></div>
+                <div class="text-zinc-400">
+                    <iconify-icon icon="lucide:message-square" width="20"></iconify-icon>
+                </div>
+                <div class="flex-grow h-px bg-gradient-to-r from-transparent via-zinc-300 to-transparent"></div>
+            </div>
+
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <h2 class="text-3xl font-manrope font-bold text-zinc-900 mb-4">
                     <span class="lang-en">Get Your Free Estimate</span>
                     <span class="lang-es">Solicita Tu Presupuesto Gratis</span>
                 </h2>
-                <p class="text-zinc-500">
+                <p class="text-zinc-600">
                     <span class="lang-en">No hidden fees. No surprises. Just honest pricing and professional service.</span>
                     <span class="lang-es">Sin costos ocultos. Sin sorpresas. Solo precios honestos y servicio profesional.</span>
                 </p>
