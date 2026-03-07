@@ -3,12 +3,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Piscinas Pérez | Professional Pool Services &amp; Maintenance</title>
 <meta name="description" content="Premium pool services in the USA. Maintenance, repairs, cleaning &amp; renovations. Bilingual service. We speak Spanish. Licensed &amp; insured. Free estimates.">
+<meta name="keywords" content="pool service, pool maintenance, pool repairs, pool cleaning, Miami pools, piscinas, mantenimiento de piscinas">
+<meta name="author" content="Piscinas Pérez">
+<meta name="language" content="English, Spanish">
+<meta name="robots" content="index, follow">
 <!-- Open Graph -->
 <meta property="og:title" content="Piscinas Pérez | Professional Pool Services">
 <meta property="og:description" content="Family-owned pool service company. Maintenance, repairs, cleaning &amp; renovations. Bilingual service. Fair prices &amp; honest expertise. We speak Spanish.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="es_US">
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Piscinas Pérez",
+  "description": "Professional family-owned pool maintenance, repair, and renovation services. Bilingual service with 30+ years of experience.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Miami",
+    "addressRegion": "FL",
+    "postalCode": "33101",
+    "addressCountry": "US"
+  },
+  "telephone": "(305) 555-0199",
+  "url": "https://piscinasperez.com",
+  "areaServed": "Miami-Dade County, USA",
+  "foundingDate": "2008",
+  "priceRange": "$$",
+  "serviceType": ["Pool Maintenance", "Pool Repairs", "Pool Cleaning", "Pool Renovations"],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "ratingCount": "478",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "07:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "08:00",
+      "closes": "17:00"
+    }
+  ]
+}
+</script>
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230ea5e9'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='20'>🏊</text></svg>">
 <script src="https://cdn.tailwindcss.com"></script>
@@ -200,18 +247,18 @@ tailwind.config = {
                 </a>
             </div>
 
-            <div class="flex items-center gap-4">
-                <button onclick="toggleLanguage()" class="text-xs font-semibold text-zinc-500 hover:text-zinc-900 flex items-center gap-1 border border-zinc-200 px-3 py-1.5 rounded-full transition-colors cursor-pointer select-none">
+            <div class="flex items-center gap-3">
+                <button onclick="toggleLanguage()" class="text-xs font-semibold text-zinc-500 hover:text-zinc-900 flex items-center gap-1 border border-zinc-200 px-3 py-1.5 rounded-lg transition-colors cursor-pointer select-none">
                     <iconify-icon icon="lucide:globe" width="14"></iconify-icon>
                     <span class="lang-en lang-toggle-text">We Speak Spanish</span>
                     <span class="lang-es lang-toggle-text">Switch to English</span>
                 </button>
-                <a href="#contacto" class="hidden lg:flex items-center gap-2 bg-blue-600 text-white text-xs font-semibold px-5 py-2.5 rounded-full hover:bg-blue-500 transition-all shadow-lg shadow-blue-600/10">
+                <a href="#contacto" class="hidden lg:flex items-center gap-2 bg-blue-600 text-white text-xs font-semibold px-5 py-2.5 rounded-lg hover:bg-blue-700 transition-all">
                     <iconify-icon icon="lucide:clipboard-list" width="14"></iconify-icon>
                     <span class="lang-en">Free Estimate</span>
                     <span class="lang-es">Presupuesto Gratis</span>
                 </a>
-                <a href="https://wa.me/34623282101" class="hidden md:flex items-center gap-2 bg-zinc-900 text-white text-xs font-semibold px-5 py-2.5 rounded-full hover:bg-zinc-800 transition-all shadow-lg shadow-zinc-900/10">
+                <a href="tel:(305)555-0199" class="hidden md:flex items-center gap-2 bg-zinc-900 text-white text-xs font-semibold px-5 py-2.5 rounded-lg hover:bg-zinc-800 transition-all">
                     <iconify-icon icon="lucide:phone" width="14"></iconify-icon>
                     (305) 555-0199
                 </a>
@@ -227,10 +274,11 @@ tailwind.config = {
     <div id="mobile-menu" class="hidden fixed inset-0 z-[60] bg-white">
         <div class="flex h-16 max-w-6xl mx-auto px-6 items-center justify-between border-b border-zinc-100">
             <a href="#" class="text-xl font-bold tracking-tighter text-zinc-900 flex items-center gap-2">
-                <div class="bg-blue-600 text-white p-1.5 rounded-lg">
-                    <iconify-icon icon="lucide:hammer" width="16" height="16"></iconify-icon>
+                <div class="bg-cyan-600 text-white p-1.5 rounded-lg">
+                    <iconify-icon icon="lucide:waves" width="16" height="16"></iconify-icon>
                 </div>
-                MIAMIFIX
+                <span class="lang-en">PISCINAS PÉREZ</span>
+                <span class="lang-es">PISCINAS PÉREZ</span>
             </a>
             <button onclick="toggleMobileMenu()" class="flex items-center justify-center w-10 h-10 rounded-lg hover:bg-zinc-100 transition-colors" aria-label="Close menu">
                 <iconify-icon icon="lucide:x" width="22"></iconify-icon>
@@ -258,12 +306,12 @@ tailwind.config = {
                 <span class="lang-es">Contacto</span>
             </a>
             <div class="flex flex-col gap-3 w-full mt-4 px-6">
-                <a href="#contacto" onclick="toggleMobileMenu()" class="flex items-center justify-center gap-2 bg-blue-600 text-white text-sm font-semibold px-6 py-3 rounded-full">
+                <a href="#contacto" onclick="toggleMobileMenu()" class="flex items-center justify-center gap-2 bg-blue-600 text-white text-sm font-semibold px-6 py-3 rounded-lg hover:bg-blue-700 transition-all">
                     <iconify-icon icon="lucide:clipboard-list" width="14"></iconify-icon>
                     <span class="lang-en">Free Estimate</span>
                     <span class="lang-es">Presupuesto Gratis</span>
                 </a>
-                <a href="https://wa.me/34623282101" class="flex items-center justify-center gap-2 bg-zinc-900 text-white text-sm font-semibold px-6 py-3 rounded-full">
+                <a href="tel:(305)555-0199" class="flex items-center justify-center gap-2 bg-zinc-900 text-white text-sm font-semibold px-6 py-3 rounded-lg hover:bg-zinc-800 transition-all">
                     <iconify-icon icon="lucide:phone" width="14"></iconify-icon>
                     (305) 555-0199
                 </a>
