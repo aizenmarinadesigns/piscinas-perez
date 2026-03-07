@@ -170,39 +170,6 @@ tailwind.config = {
             annualPrices.forEach(el => el.classList.add('hidden'));
         }
     }
-
-    // Counter Animation for Statistics Section
-    function animateCounters() {
-        const counters = document.querySelectorAll('[data-target]');
-        counters.forEach(counter => {
-            const target = parseInt(counter.getAttribute('data-target'));
-            const duration = 2000; // 2 seconds
-            const increment = target / (duration / 16); // 60fps
-            let current = 0;
-
-            const updateCounter = () => {
-                current += increment;
-                if (current < target) {
-                    counter.textContent = Math.floor(current).toLocaleString();
-                    requestAnimationFrame(updateCounter);
-                } else {
-                    counter.textContent = target.toLocaleString();
-                }
-            };
-
-            // Start animation when element is in view
-            const observer = new IntersectionObserver((entries) => {
-                if (entries[0].isIntersecting) {
-                    updateCounter();
-                    observer.unobserve(counter);
-                }
-            }, { threshold: 0.5 });
-
-            observer.observe(counter);
-        });
-    }
-
-    document.addEventListener('DOMContentLoaded', animateCounters);
 </script>
 </head>
 <body class="bg-white text-zinc-600 font-sans antialiased selection:bg-blue-500 selection:text-white relative spanish-mode">
@@ -223,9 +190,9 @@ tailwind.config = {
                     <span class="lang-en">Our Work</span>
                     <span class="lang-es">Trabajos</span>
                 </a>
-                <a href="#services" class="hover:text-blue-600 transition-colors">
-                    <span class="lang-en">Services</span>
-                    <span class="lang-es">Servicios</span>
+                <a href="#promise" class="hover:text-blue-600 transition-colors">
+                    <span class="lang-en">The Promise</span>
+                    <span class="lang-es">La Promesa</span>
                 </a>
                 <a href="#plans" class="hover:text-blue-600 transition-colors">
                     <span class="lang-en">Plans</span>
@@ -239,6 +206,11 @@ tailwind.config = {
                     <span class="lang-en lang-toggle-text">We Speak Spanish</span>
                     <span class="lang-es lang-toggle-text">Switch to English</span>
                 </button>
+                <a href="#contacto" class="hidden lg:flex items-center gap-2 bg-blue-600 text-white text-xs font-semibold px-5 py-2.5 rounded-full hover:bg-blue-500 transition-all shadow-lg shadow-blue-600/10">
+                    <iconify-icon icon="lucide:clipboard-list" width="14"></iconify-icon>
+                    <span class="lang-en">Free Estimate</span>
+                    <span class="lang-es">Presupuesto Gratis</span>
+                </a>
                 <a href="https://wa.me/34623282101" class="hidden md:flex items-center gap-2 bg-zinc-900 text-white text-xs font-semibold px-5 py-2.5 rounded-full hover:bg-zinc-800 transition-all shadow-lg shadow-zinc-900/10">
                     <iconify-icon icon="lucide:phone" width="14"></iconify-icon>
                     (305) 555-0199
@@ -285,10 +257,17 @@ tailwind.config = {
                 <span class="lang-en">Contact</span>
                 <span class="lang-es">Contacto</span>
             </a>
-            <a href="https://wa.me/34623282101" class="flex items-center gap-2 bg-zinc-900 text-white text-sm font-semibold px-6 py-3 rounded-full mt-4">
-                <iconify-icon icon="lucide:phone" width="14"></iconify-icon>
-                (305) 555-0199
-            </a>
+            <div class="flex flex-col gap-3 w-full mt-4 px-6">
+                <a href="#contacto" onclick="toggleMobileMenu()" class="flex items-center justify-center gap-2 bg-blue-600 text-white text-sm font-semibold px-6 py-3 rounded-full">
+                    <iconify-icon icon="lucide:clipboard-list" width="14"></iconify-icon>
+                    <span class="lang-en">Free Estimate</span>
+                    <span class="lang-es">Presupuesto Gratis</span>
+                </a>
+                <a href="https://wa.me/34623282101" class="flex items-center justify-center gap-2 bg-zinc-900 text-white text-sm font-semibold px-6 py-3 rounded-full">
+                    <iconify-icon icon="lucide:phone" width="14"></iconify-icon>
+                    (305) 555-0199
+                </a>
+            </div>
         </nav>
     </div>
 
@@ -305,7 +284,7 @@ tailwind.config = {
         <!-- Content -->
         <div class="relative z-10 w-full">
             <div class="max-w-6xl mx-auto px-6">
-                <div class="flex flex-col items-center justify-center w-full">
+                <div class="flex flex-col items-center justify-center max-w-2xl text-center">
 
                     <!-- Credibility Badge -->
                     <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-400/50 text-xs font-bold text-white mb-8 backdrop-blur-sm">
@@ -318,8 +297,8 @@ tailwind.config = {
                     </div>
 
                     <h1 class="text-4xl sm:text-5xl lg:text-7xl font-manrope font-bold text-white tracking-tight leading-[1.1] mb-6">
-                        <span class="lang-en">Crystal Clear Pools All Year<br><span class="bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">No Hassles, No Surprises</span></span>
-                        <span class="lang-es">Piscinas Cristalinas Todo el Año<br><span class="bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">Sin Molestias, Sin Sorpresas</span></span>
+                        <span class="lang-en">Professional Pool Service<br><span class="bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">Your Family Deserves</span></span>
+                        <span class="lang-es">Servicio Profesional de Piscina<br><span class="bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">Que Su Familia Merece</span></span>
                     </h1>
 
                     <p class="text-lg text-white/95 mb-8 max-w-2xl leading-relaxed">
@@ -327,9 +306,10 @@ tailwind.config = {
                         <span class="lang-es">Mantenimiento. Reparaciones. Limpieza. Renovaciones. Llevamos 30 años manteniendo piscinas cristalinas en Miami. Servicio rápido. Precios justos. Equipo bilingüe. Sin sorpresas.</span>
                     </p>
 
-                    <!-- Trust Badges Row - Horizontal -->
-                    <div class="flex flex-wrap justify-center items-center gap-8 mb-10 text-white/90">
-                        <div class="flex items-center gap-2">
+                    <!-- Trust Badges Row -->
+                    <div class="grid grid-cols-2 gap-3 mb-10 max-w-xl">
+                        <!-- Badge 1: Google Reviews -->
+                        <div class="bg-white/10 backdrop-blur border border-white/20 rounded-lg p-3 flex items-center gap-3">
                             <div class="flex gap-0.5 text-yellow-300">
                                 <iconify-icon icon="lucide:star" width="14" class="fill-current"></iconify-icon>
                                 <iconify-icon icon="lucide:star" width="14" class="fill-current"></iconify-icon>
@@ -337,22 +317,37 @@ tailwind.config = {
                                 <iconify-icon icon="lucide:star" width="14" class="fill-current"></iconify-icon>
                                 <iconify-icon icon="lucide:star" width="14" class="fill-current"></iconify-icon>
                             </div>
-                            <span class="font-bold">4.9<span class="text-cyan-300">/5</span> <span class="text-xs"><span class="lang-en">Reviews</span><span class="lang-es">Reseñas</span></span></span>
+                            <div class="text-sm">
+                                <p class="font-bold text-white text-sm">4.9<span class="text-cyan-300">/5</span></p>
+                                <p class="text-xs text-white/85"><span class="lang-en">478 Reviews</span><span class="lang-es">478 Reseñas</span></p>
+                            </div>
                         </div>
-                        <span class="text-white/40">|</span>
-                        <div class="flex items-center gap-2">
-                            <iconify-icon icon="lucide:users" width="18" class="text-cyan-300"></iconify-icon>
-                            <span class="font-bold">1,200+ <span class="text-xs"><span class="lang-en">Families</span><span class="lang-es">Familias</span></span></span>
+
+                        <!-- Badge 2: Satisfied Families -->
+                        <div class="bg-white/10 backdrop-blur border border-white/20 rounded-lg p-3 flex items-center gap-3">
+                            <iconify-icon icon="lucide:users" width="24" class="text-cyan-300"></iconify-icon>
+                            <div class="text-sm">
+                                <p class="font-bold text-white text-sm">5,200+</p>
+                                <p class="text-xs text-white/85"><span class="lang-en">Satisfied Families</span><span class="lang-es">Familias Satisfechas</span></p>
+                            </div>
                         </div>
-                        <span class="text-white/40">|</span>
-                        <div class="flex items-center gap-2">
-                            <iconify-icon icon="lucide:shield-check" width="18" class="text-green-300"></iconify-icon>
-                            <span class="font-bold text-xs"><span class="lang-en">Licensed & Insured</span><span class="lang-es">Licenciado & Asegurado</span></span>
+
+                        <!-- Badge 3: Licensed & Insured -->
+                        <div class="bg-white/10 backdrop-blur border border-white/20 rounded-lg p-3 flex items-center gap-3">
+                            <iconify-icon icon="lucide:shield-check" width="24" class="text-green-300"></iconify-icon>
+                            <div class="text-sm">
+                                <p class="font-bold text-white text-sm"><span class="lang-en">Licensed</span><span class="lang-es">Licenciado</span></p>
+                                <p class="text-xs text-white/85"><span class="lang-en">&amp; Insured</span><span class="lang-es">&amp; Asegurado</span></p>
+                            </div>
                         </div>
-                        <span class="text-white/40">|</span>
-                        <div class="flex items-center gap-2">
-                            <iconify-icon icon="lucide:clock" width="18" class="text-orange-300"></iconify-icon>
-                            <span class="font-bold">24/7 <span class="text-xs"><span class="lang-en">Emergency</span><span class="lang-es">Emergencia</span></span></span>
+
+                        <!-- Badge 4: Pools Recovered -->
+                        <div class="bg-white/10 backdrop-blur border border-white/20 rounded-lg p-3 flex items-center gap-3">
+                            <iconify-icon icon="lucide:zap" width="24" class="text-blue-300"></iconify-icon>
+                            <div class="text-sm">
+                                <p class="font-bold text-white text-sm">1,200+</p>
+                                <p class="text-xs text-white/85"><span class="lang-en">Pools Recovered</span><span class="lang-es">Piscinas Recuperadas</span></p>
+                            </div>
                         </div>
                     </div>
 
@@ -373,38 +368,6 @@ tailwind.config = {
             </div>
         </div>
     </header>
-
-    <!-- Statistics/Impact Section -->
-    <section class="py-16 bg-gradient-to-r from-blue-600 to-cyan-600">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-center text-white mb-12 text-2xl sm:text-3xl font-manrope font-bold">
-                <span class="lang-en">The Piscinas Pérez Impact</span>
-                <span class="lang-es">El Impacto Piscinas Pérez</span>
-            </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center text-white">
-                <!-- Stat 1: Pools Maintained -->
-                <div class="flex flex-col items-center">
-                    <div class="text-5xl sm:text-6xl font-bold mb-2" data-target="5200">0</div>
-                    <p class="text-sm sm:text-base"><span class="lang-en">Pools Maintained</span><span class="lang-es">Piscinas Mantenidas</span></p>
-                </div>
-                <!-- Stat 2: Satisfied Families -->
-                <div class="flex flex-col items-center">
-                    <div class="text-5xl sm:text-6xl font-bold mb-2" data-target="1200">0</div>
-                    <p class="text-sm sm:text-base"><span class="lang-en">Satisfied Families</span><span class="lang-es">Familias Satisfechas</span></p>
-                </div>
-                <!-- Stat 3: Years of Trust -->
-                <div class="flex flex-col items-center">
-                    <div class="text-5xl sm:text-6xl font-bold mb-2" data-target="30">0</div>
-                    <p class="text-sm sm:text-base"><span class="lang-en">Years of Trust</span><span class="lang-es">Años de Confianza</span></p>
-                </div>
-                <!-- Stat 4: Same-Day Emergencies -->
-                <div class="flex flex-col items-center">
-                    <div class="text-5xl sm:text-6xl font-bold mb-2">24/7</div>
-                    <p class="text-sm sm:text-base"><span class="lang-en">Emergency Response</span><span class="lang-es">Respuesta de Emergencia</span></p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- ============================================================
          SECCIÓN TRABAJOS — Slider Antes & Después
@@ -799,217 +762,59 @@ tailwind.config = {
  
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-white border-b border-zinc-200">
+    <!-- The Clean Promise -->
+    <section id="promise" class="py-20 bg-zinc-50 border-y border-zinc-200">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <h2 class="text-3xl font-manrope font-bold text-zinc-900 mb-4">
-                    <span class="lang-en">Our Services</span>
-                    <span class="lang-es">Nuestros Servicios</span>
+                    <span class="lang-en">The Crystal Clear Promise</span>
+                    <span class="lang-es">La Promesa de Agua Cristalina</span>
                 </h2>
                 <p class="text-zinc-500">
-                    <span class="lang-en">Complete pool solutions for every need — from routine maintenance to emergency repairs and full renovations.</span>
-                    <span class="lang-es">Soluciones completas de piscina para cada necesidad, desde mantenimiento rutinario hasta reparaciones de emergencia y renovaciones totales.</span>
+                    <span class="lang-en">Most pool companies just maintain the basics. We believe your pool should be a sparkling oasis — crystal clear water, perfectly balanced, and maintained to perfection.</span>
+                    <span class="lang-es">La mayoría de las compañías solo mantienen lo básico. Creemos que su piscina debe ser un oasis de esplendor: agua cristalina, perfectamente equilibrada y mantenida a la perfección.</span>
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1: Weekly Maintenance -->
-                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl border border-blue-200 hover:shadow-lg transition-all">
-                    <div class="w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center mb-6">
-                        <iconify-icon icon="lucide:calendar-check" width="28"></iconify-icon>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-6">
+                        <iconify-icon icon="lucide:footprints" width="24"></iconify-icon>
                     </div>
-                    <h3 class="font-bold text-zinc-900 mb-3 text-lg">
-                        <span class="lang-en">Weekly Maintenance</span>
-                        <span class="lang-es">Mantenimiento Semanal</span>
+                    <h3 class="font-bold text-zinc-900 mb-2">
+                        <span class="lang-en">Crystal Clear Water Guaranteed</span>
+                        <span class="lang-es">Agua Cristalina Garantizada</span>
                     </h3>
-                    <ul class="text-sm text-zinc-600 space-y-2 mb-6">
-                        <li class="flex items-start gap-2">
-                            <span class="text-cyan-600 mt-1">✓</span>
-                            <span><span class="lang-en">Water chemistry testing & balancing</span><span class="lang-es">Pruebas de química del agua y equilibrio</span></span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-cyan-600 mt-1">✓</span>
-                            <span><span class="lang-en">Filter maintenance & cleaning</span><span class="lang-es">Mantenimiento y limpieza de filtros</span></span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-cyan-600 mt-1">✓</span>
-                            <span><span class="lang-en">Debris removal & brushing</span><span class="lang-es">Remoción de escombros y cepillado</span></span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-cyan-600 mt-1">✓</span>
-                            <span><span class="lang-en">Equipment inspection</span><span class="lang-es">Inspección de equipos</span></span>
-                        </li>
-                    </ul>
-                    <a href="#contact" class="block w-full py-3 bg-blue-600 text-white rounded-lg font-bold text-center hover:bg-blue-700 transition-colors">
-                        <span class="lang-en">Get Weekly Service</span>
-                        <span class="lang-es">Quiero Mantenimiento Semanal</span>
-                    </a>
+                    <p class="text-sm text-zinc-500">
+                        <span class="lang-en">We test your water chemistry daily and balance it perfectly. No cloudy water, no algae, no guessing games — just crystal clear water, every single day.</span>
+                        <span class="lang-es">Probamos la química del agua diariamente y la equilibramos perfectamente. Sin agua turbia, sin algas, sin conjeturas — solo agua cristalina, cada día.</span>
+                    </p>
                 </div>
-
-                <!-- Service 2: Emergency Repairs -->
-                <div class="bg-gradient-to-br from-red-50 to-orange-50 p-8 rounded-2xl border border-red-200 hover:shadow-lg transition-all">
-                    <div class="w-14 h-14 bg-red-600 text-white rounded-full flex items-center justify-center mb-6">
-                        <iconify-icon icon="lucide:zap" width="28"></iconify-icon>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-6">
+                        <iconify-icon icon="lucide:sparkles" width="24"></iconify-icon>
                     </div>
-                    <h3 class="font-bold text-zinc-900 mb-3 text-lg">
-                        <span class="lang-en">Emergency Repairs</span>
-                        <span class="lang-es">Reparaciones de Emergencia</span>
+                    <h3 class="font-bold text-zinc-900 mb-2">
+                        <span class="lang-en">Your Pool, Well-Maintained</span>
+                        <span class="lang-es">Tu Piscina, Bien Mantenida</span>
                     </h3>
-                    <ul class="text-sm text-zinc-600 space-y-2 mb-6">
-                        <li class="flex items-start gap-2">
-                            <span class="text-red-600 mt-1">✓</span>
-                            <span><span class="lang-en">Same-day response (24/7)</span><span class="lang-es">Respuesta el mismo día (24/7)</span></span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-red-600 mt-1">✓</span>
-                            <span><span class="lang-en">Pump & motor repair/replacement</span><span class="lang-es">Reparación/reemplazo de bomba y motor</span></span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-red-600 mt-1">✓</span>
-                            <span><span class="lang-en">Filter & pressure issues</span><span class="lang-es">Problemas de filtro y presión</span></span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-red-600 mt-1">✓</span>
-                            <span><span class="lang-en">30-day labor guarantee</span><span class="lang-es">Garantía de mano de obra 30 días</span></span>
-                        </li>
-                    </ul>
-                    <a href="tel:+13055550199" class="block w-full py-3 bg-red-600 text-white rounded-lg font-bold text-center hover:bg-red-700 transition-colors">
-                        <span class="lang-en">Call Now - Emergency</span>
-                        <span class="lang-es">Llamar Ahora - Emergencia</span>
-                    </a>
+                    <p class="text-sm text-zinc-500">
+                        <span class="lang-en">We don't just skim leaves. We maintain filters, brushes walls, vacuums the floor, and check every component. Your pool gets the full treatment every visit.</span>
+                        <span class="lang-es">No solo sacamos hojas. Mantenemos filtros, limpiamos paredes, limpiamos el fondo y revisamos cada componente. Su piscina recibe tratamiento completo en cada visita.</span>
+                    </p>
                 </div>
-
-                <!-- Service 3: Deep Cleaning -->
-                <div class="bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-2xl border border-green-200 hover:shadow-lg transition-all">
-                    <div class="w-14 h-14 bg-green-600 text-white rounded-full flex items-center justify-center mb-6">
-                        <iconify-icon icon="lucide:droplets" width="28"></iconify-icon>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 flex flex-col items-center text-center">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-6">
+                        <iconify-icon icon="lucide:shield-check" width="24"></iconify-icon>
                     </div>
-                    <h3 class="font-bold text-zinc-900 mb-3 text-lg">
-                        <span class="lang-en">Deep Cleaning</span>
-                        <span class="lang-es">Limpieza Profunda</span>
+                    <h3 class="font-bold text-zinc-900 mb-2">
+                        <span class="lang-en">Expert & Fully Insured</span>
+                        <span class="lang-es">Expertos y Completamente Asegurados</span>
                     </h3>
-                    <ul class="text-sm text-zinc-600 space-y-2 mb-6">
-                        <li class="flex items-start gap-2">
-                            <span class="text-green-600 mt-1">✓</span>
-                            <span><span class="lang-en">Algae removal & treatment</span><span class="lang-es">Remoción y tratamiento de algas</span></span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-green-600 mt-1">✓</span>
-                            <span><span class="lang-en">Water shock treatment</span><span class="lang-es">Tratamiento de choque del agua</span></span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-green-600 mt-1">✓</span>
-                            <span><span class="lang-en">Wall & tile brushing</span><span class="lang-es">Cepillado de paredes y azulejos</span></span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-green-600 mt-1">✓</span>
-                            <span><span class="lang-en">Complete equipment flush</span><span class="lang-es">Limpieza completa de equipos</span></span>
-                        </li>
-                    </ul>
-                    <a href="#contact" class="block w-full py-3 bg-green-600 text-white rounded-lg font-bold text-center hover:bg-green-700 transition-colors">
-                        <span class="lang-en">Schedule Deep Clean</span>
-                        <span class="lang-es">Quiero Limpieza Profunda</span>
-                    </a>
-                </div>
-
-                <!-- Service 4: Seasonal Opening/Closing -->
-                <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl border border-purple-200 hover:shadow-lg transition-all">
-                    <div class="w-14 h-14 bg-purple-600 text-white rounded-full flex items-center justify-center mb-6">
-                        <iconify-icon icon="lucide:leaf" width="28"></iconify-icon>
-                    </div>
-                    <h3 class="font-bold text-zinc-900 mb-3 text-lg">
-                        <span class="lang-en">Seasonal Services</span>
-                        <span class="lang-es">Servicios Estacionales</span>
-                    </h3>
-                    <ul class="text-sm text-zinc-600 space-y-2 mb-6">
-                        <li class="flex items-start gap-2">
-                            <span class="text-purple-600 mt-1">✓</span>
-                            <span><span class="lang-en">Spring opening & start-up</span><span class="lang-es">Apertura de primavera e inicio</span></span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-purple-600 mt-1">✓</span>
-                            <span><span class="lang-en">Fall winterization & closing</span><span class="lang-es">Invernalización y cierre de otoño</span></span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-purple-600 mt-1">✓</span>
-                            <span><span class="lang-en">Cover installation & removal</span><span class="lang-es">Instalación y remoción de cubiertas</span></span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-purple-600 mt-1">✓</span>
-                            <span><span class="lang-en">Equipment preparation</span><span class="lang-es">Preparación de equipos</span></span>
-                        </li>
-                    </ul>
-                    <a href="#contact" class="block w-full py-3 bg-purple-600 text-white rounded-lg font-bold text-center hover:bg-purple-700 transition-colors">
-                        <span class="lang-en">Schedule Seasonal Service</span>
-                        <span class="lang-es">Quiero Servicio Estacional</span>
-                    </a>
-                </div>
-
-                <!-- Service 5: Renovations & Upgrades -->
-                <div class="bg-gradient-to-br from-yellow-50 to-amber-50 p-8 rounded-2xl border border-yellow-200 hover:shadow-lg transition-all">
-                    <div class="w-14 h-14 bg-yellow-600 text-white rounded-full flex items-center justify-center mb-6">
-                        <iconify-icon icon="lucide:hammer" width="28"></iconify-icon>
-                    </div>
-                    <h3 class="font-bold text-zinc-900 mb-3 text-lg">
-                        <span class="lang-en">Renovations & Upgrades</span>
-                        <span class="lang-es">Renovaciones y Mejoras</span>
-                    </h3>
-                    <ul class="text-sm text-zinc-600 space-y-2 mb-6">
-                        <li class="flex items-start gap-2">
-                            <span class="text-yellow-600 mt-1">✓</span>
-                            <span><span class="lang-en">Equipment upgrades & modernization</span><span class="lang-es">Actualización y modernización de equipos</span></span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-yellow-600 mt-1">✓</span>
-                            <span><span class="lang-en">LED lighting & automation systems</span><span class="lang-es">Iluminación LED y sistemas de automatización</span></span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-yellow-600 mt-1">✓</span>
-                            <span><span class="lang-en">Surface resurfacing (plaster, tile)</span><span class="lang-es">Resurfacing de superficies (yeso, azulejo)</span></span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-yellow-600 mt-1">✓</span>
-                            <span><span class="lang-en">Custom designs & installations</span><span class="lang-es">Diseños e instalaciones personalizadas</span></span>
-                        </li>
-                    </ul>
-                    <a href="#contact" class="block w-full py-3 bg-yellow-600 text-white rounded-lg font-bold text-center hover:bg-yellow-700 transition-colors">
-                        <span class="lang-en">Get a Renovation Quote</span>
-                        <span class="lang-es">Quiero Presupuesto de Renovación</span>
-                    </a>
-                </div>
-
-                <!-- Service 6: Chemical Service & Testing -->
-                <div class="bg-gradient-to-br from-indigo-50 to-blue-50 p-8 rounded-2xl border border-indigo-200 hover:shadow-lg transition-all">
-                    <div class="w-14 h-14 bg-indigo-600 text-white rounded-full flex items-center justify-center mb-6">
-                        <iconify-icon icon="lucide:flask" width="28"></iconify-icon>
-                    </div>
-                    <h3 class="font-bold text-zinc-900 mb-3 text-lg">
-                        <span class="lang-en">Chemical Service & Testing</span>
-                        <span class="lang-es">Servicio Químico y Pruebas</span>
-                    </h3>
-                    <ul class="text-sm text-zinc-600 space-y-2 mb-6">
-                        <li class="flex items-start gap-2">
-                            <span class="text-indigo-600 mt-1">✓</span>
-                            <span><span class="lang-en">Daily pH & chlorine monitoring</span><span class="lang-es">Monitoreo diario de pH y cloro</span></span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-indigo-600 mt-1">✓</span>
-                            <span><span class="lang-en">Saltwater system maintenance</span><span class="lang-es">Mantenimiento de sistema de agua salada</span></span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-indigo-600 mt-1">✓</span>
-                            <span><span class="lang-en">Calcium hardness control</span><span class="lang-es">Control de dureza del calcio</span></span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-indigo-600 mt-1">✓</span>
-                            <span><span class="lang-en">Free testing & analysis</span><span class="lang-es">Pruebas y análisis gratuitos</span></span>
-                        </li>
-                    </ul>
-                    <a href="#contact" class="block w-full py-3 bg-indigo-600 text-white rounded-lg font-bold text-center hover:bg-indigo-700 transition-colors">
-                        <span class="lang-en">Start Chemical Service</span>
-                        <span class="lang-es">Quiero Servicio Químico</span>
-                    </a>
+                    <p class="text-sm text-zinc-500">
+                        <span class="lang-en">Every technician is certified in pool chemistry and equipment maintenance. We carry full liability insurance, so you can relax knowing your pool is in expert hands.</span>
+                        <span class="lang-es">Cada técnico está certificado en química de piscinas y mantenimiento de equipos. Tenemos seguro de responsabilidad civil completo, así que puedes relajarte sabiendo que tu piscina está en manos expertas.</span>
+                    </p>
                 </div>
             </div>
         </div>
@@ -1321,14 +1126,19 @@ tailwind.config = {
                             <span class="font-semibold text-white">$75 / visit</span>
                         </li>
                          <li class="pt-4 border-t border-white/5 flex items-start gap-3">
-                            <iconify-icon icon="lucide:check-circle-2" class="text-zinc-500 shrink-0 mt-0.5"></iconify-icon>
+                            <iconify-icon icon="lucide:check-circle-2" class="text-blue-400 shrink-0 mt-0.5"></iconify-icon>
                             <span class="lang-en">Chemical testing included</span>
                             <span class="lang-es">Pruebas químicas incluidas</span>
                         </li>
                          <li class="flex items-start gap-3">
-                            <iconify-icon icon="lucide:check-circle-2" class="text-zinc-500 shrink-0 mt-0.5"></iconify-icon>
+                            <iconify-icon icon="lucide:check-circle-2" class="text-blue-400 shrink-0 mt-0.5"></iconify-icon>
                             <span class="lang-en">Full cleanup guarantee</span>
                             <span class="lang-es">Garantía de limpieza completa</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="lucide:check-circle-2" class="text-blue-400 shrink-0 mt-0.5"></iconify-icon>
+                            <span class="lang-en">30-day labor guarantee</span>
+                            <span class="lang-es">Garantía de 30 días</span>
                         </li>
                     </ul>
 
@@ -1368,26 +1178,30 @@ tailwind.config = {
                         </p>
                     </div>
                     
-                    <div class="bg-blue-900/20 rounded-lg p-4 mb-6 border border-blue-500/20">
-                        <p class="text-xs text-blue-200 mb-2 font-semibold"><span class="lang-en">THE MATH IS SIMPLE:</span><span class="lang-es">LAS MATEMÁTICAS SON SIMPLES:</span></p>
-                        <div class="flex justify-between text-sm mb-1 text-zinc-300">
+                    <div class="bg-zinc-700/30 rounded-lg p-4 mb-6 border border-zinc-600/30">
+                        <p class="text-xs text-zinc-300 mb-2 font-semibold"><span class="lang-en">THE MATH IS SIMPLE:</span><span class="lang-es">LAS MATEMÁTICAS SON SIMPLES:</span></p>
+                        <div class="flex justify-between text-sm mb-1 text-zinc-400">
                             <span class="lang-en">Standard Trip Fee</span><span class="lang-es">Tarifa Visita Estándar</span>
-                            <span class="text-red-400 line-through">$50</span>
+                            <span class="text-zinc-500 line-through">$50</span>
                         </div>
                         <div class="flex justify-between text-sm text-white font-bold">
                             <span class="lang-en">Member Trip Fee</span><span class="lang-es">Tarifa Visita Miembros</span>
-                            <span class="text-green-400">$0 (Free)</span>
+                            <span class="text-blue-400">$0</span>
                         </div>
                     </div>
 
-                    <ul class="space-y-4 mb-8 text-sm text-zinc-300">
+                    <ul class="space-y-4 mb-8 text-sm text-zinc-300 flex-1">
                         <li class="flex justify-between">
                             <span class="lang-en">Labor Rate</span><span class="lang-es">Mano de Obra</span>
                             <span class="font-bold text-white">$65 / hr</span>
                         </li>
-                        <li class="flex justify-between">
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="lucide:check-circle-2" class="text-blue-400 shrink-0 mt-0.5"></iconify-icon>
                             <span class="lang-en">Priority Booking</span><span class="lang-es">Prioridad</span>
-                            <span class="text-white"><iconify-icon icon="lucide:check" class="text-green-400"></iconify-icon></span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="lucide:check-circle-2" class="text-blue-400 shrink-0 mt-0.5"></iconify-icon>
+                            <span class="lang-en">No trip fees for members</span><span class="lang-es">Sin tarifas de viaje</span>
                         </li>
                     </ul>
 
@@ -1424,19 +1238,24 @@ tailwind.config = {
                     
                     <ul class="space-y-4 mb-8 text-sm text-zinc-300 flex-1">
                         <li class="flex items-start gap-3">
-                            <iconify-icon icon="lucide:check-circle-2" class="text-blue-500 shrink-0 mt-0.5"></iconify-icon>
+                            <iconify-icon icon="lucide:check-circle-2" class="text-blue-400 shrink-0 mt-0.5"></iconify-icon>
                             <span class="lang-en">Bi-weekly service visits</span>
                             <span class="lang-es">Visitas quincenales</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <iconify-icon icon="lucide:check-circle-2" class="text-blue-500 shrink-0 mt-0.5"></iconify-icon>
+                            <iconify-icon icon="lucide:check-circle-2" class="text-blue-400 shrink-0 mt-0.5"></iconify-icon>
                             <span class="lang-en">Equipment troubleshooting included</span>
                             <span class="lang-es">Diagnóstico de equipo incluido</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <iconify-icon icon="lucide:check-circle-2" class="text-blue-500 shrink-0 mt-0.5"></iconify-icon>
+                            <iconify-icon icon="lucide:check-circle-2" class="text-blue-400 shrink-0 mt-0.5"></iconify-icon>
                             <span class="lang-en">Seasonal opening & closing</span>
                             <span class="lang-es">Apertura y cierre estacional</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <iconify-icon icon="lucide:check-circle-2" class="text-blue-400 shrink-0 mt-0.5"></iconify-icon>
+                            <span class="lang-en">30-day guarantee on all work</span>
+                            <span class="lang-es">Garantía de 30 días</span>
                         </li>
                     </ul>
                     
@@ -1844,11 +1663,141 @@ tailwind.config = {
         </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contacto" class="py-24 bg-zinc-50 border-t border-zinc-100">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-manrope font-bold text-zinc-900 mb-4">
+                    <span class="lang-en">Get Your Free Estimate</span>
+                    <span class="lang-es">Solicita Tu Presupuesto Gratis</span>
+                </h2>
+                <p class="text-zinc-500">
+                    <span class="lang-en">No hidden fees. No surprises. Just honest pricing and professional service.</span>
+                    <span class="lang-es">Sin costos ocultos. Sin sorpresas. Solo precios honestos y servicio profesional.</span>
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+                <!-- Contact Methods -->
+                <div class="flex flex-col justify-center">
+                    <p class="text-zinc-600 font-semibold mb-6">
+                        <span class="lang-en">Prefer to reach us directly?</span>
+                        <span class="lang-es">¿Prefieres comunicarte directamente?</span>
+                    </p>
+                    <div class="space-y-4">
+                        <!-- Phone -->
+                        <a href="tel:+13055550199" class="flex items-center gap-4 p-4 bg-white rounded-lg border border-zinc-200 hover:border-blue-600 hover:shadow-md transition-all group">
+                            <div class="bg-blue-100 text-blue-600 p-3 rounded-lg group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                <iconify-icon icon="lucide:phone" width="20"></iconify-icon>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-zinc-900">
+                                    <span class="lang-en">Call Now</span>
+                                    <span class="lang-es">Llamar Ahora</span>
+                                </p>
+                                <p class="text-sm text-zinc-500">(305) 555-0199</p>
+                            </div>
+                        </a>
+
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/13055550199" class="flex items-center gap-4 p-4 bg-white rounded-lg border border-zinc-200 hover:border-green-600 hover:shadow-md transition-all group">
+                            <div class="bg-green-100 text-green-600 p-3 rounded-lg group-hover:bg-green-600 group-hover:text-white transition-all">
+                                <iconify-icon icon="lucide:message-circle" width="20"></iconify-icon>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-zinc-900">WhatsApp</p>
+                                <p class="text-sm text-zinc-500">
+                                    <span class="lang-en">Chat with us instantly</span>
+                                    <span class="lang-es">Chatear al instante</span>
+                                </p>
+                            </div>
+                        </a>
+
+                        <!-- Text/SMS -->
+                        <a href="sms:13055550199" class="flex items-center gap-4 p-4 bg-white rounded-lg border border-zinc-200 hover:border-cyan-600 hover:shadow-md transition-all group">
+                            <div class="bg-cyan-100 text-cyan-600 p-3 rounded-lg group-hover:bg-cyan-600 group-hover:text-white transition-all">
+                                <iconify-icon icon="lucide:mail" width="20"></iconify-icon>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-zinc-900">
+                                    <span class="lang-en">Text/SMS</span>
+                                    <span class="lang-es">Texto/SMS</span>
+                                </p>
+                                <p class="text-sm text-zinc-500">
+                                    <span class="lang-en">Send a text message</span>
+                                    <span class="lang-es">Envía un mensaje de texto</span>
+                                </p>
+                            </div>
+                        </a>
+
+                        <!-- Email -->
+                        <a href="mailto:contacto@piscinasperez.com" class="flex items-center gap-4 p-4 bg-white rounded-lg border border-zinc-200 hover:border-purple-600 hover:shadow-md transition-all group">
+                            <div class="bg-purple-100 text-purple-600 p-3 rounded-lg group-hover:bg-purple-600 group-hover:text-white transition-all">
+                                <iconify-icon icon="lucide:mail" width="20"></iconify-icon>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-zinc-900">
+                                    <span class="lang-en">Email</span>
+                                    <span class="lang-es">Correo Electrónico</span>
+                                </p>
+                                <p class="text-sm text-zinc-500">contacto@piscinasperez.com</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white p-8 rounded-2xl border border-zinc-200 shadow-sm">
+                    <h3 class="text-lg font-bold mb-6 text-zinc-900">
+                        <span class="lang-en">Or send us a message</span>
+                        <span class="lang-es">O envíanos un mensaje</span>
+                    </h3>
+                    <form name="contacto-pool" method="POST" data-netlify="true" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="contact-name" class="block text-sm font-medium text-zinc-900 mb-2">
+                                    <span class="lang-en">Your Name</span>
+                                    <span class="lang-es">Tu Nombre</span>
+                                </label>
+                                <input id="contact-name" name="nombre" type="text" required autocomplete="name" class="w-full bg-white border border-zinc-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-all">
+                            </div>
+                            <div>
+                                <label for="contact-email" class="block text-sm font-medium text-zinc-900 mb-2">
+                                    <span class="lang-en">Email</span>
+                                    <span class="lang-es">Correo Electrónico</span>
+                                </label>
+                                <input id="contact-email" name="email" type="email" required autocomplete="email" class="w-full bg-white border border-zinc-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-all">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="contact-phone" class="block text-sm font-medium text-zinc-900 mb-2">
+                                <span class="lang-en">Phone Number</span>
+                                <span class="lang-es">Número de Teléfono</span>
+                            </label>
+                            <input id="contact-phone" name="telefono" type="tel" autocomplete="tel" class="w-full bg-white border border-zinc-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-all">
+                        </div>
+                        <div>
+                            <label for="contact-message" class="block text-sm font-medium text-zinc-900 mb-2">
+                                <span class="lang-en">How can we help?</span>
+                                <span class="lang-es">¿Cómo podemos ayudarte?</span>
+                            </label>
+                            <textarea id="contact-message" name="mensaje" rows="4" class="w-full bg-white border border-zinc-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-all"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-500 transition-colors">
+                            <span class="lang-en">Send Message</span>
+                            <span class="lang-es">Enviar Mensaje</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Dark Footer with Contact Form & Yelp -->
     <footer id="footer" class="bg-zinc-950 text-white border-t border-zinc-800 pt-16 pb-12">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
-                
+            <div class="flex items-center justify-between gap-8 flex-wrap">
+
                 <!-- Contact Info & Links -->
                 <div>
                     <div class="flex items-center gap-2 mb-6">
@@ -1857,11 +1806,11 @@ tailwind.config = {
                         </div>
                         <span class="font-bold tracking-tight text-lg">PISCINAS PÉREZ</span>
                     </div>
-                    <p class="text-zinc-400 mb-8 max-w-sm">
+                    <p class="text-zinc-400 mb-8 max-w-sm text-sm">
                         <span class="lang-en">Family owned since 2008. Fully insured and licensed in Miami-Dade County.</span>
                         <span class="lang-es">Propiedad familiar desde 2008. Totalmente asegurados y con licencia en Miami-Dade.</span>
                     </p>
-                    
+
                     <div class="flex gap-6 mb-8">
                          <!-- Yelp Link -->
                         <a href="#" class="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors">
@@ -1869,7 +1818,7 @@ tailwind.config = {
                             <span class="text-sm font-medium">Check us on Yelp</span>
                         </a>
                     </div>
-                    
+
                     <div class="flex gap-4">
                         <a href="#" class="text-zinc-400 hover:text-white transition-colors" aria-label="Instagram"><iconify-icon icon="lucide:instagram" width="20"></iconify-icon></a>
                         <a href="#" class="text-zinc-400 hover:text-white transition-colors" aria-label="Facebook"><iconify-icon icon="lucide:facebook" width="20"></iconify-icon></a>
@@ -1877,110 +1826,26 @@ tailwind.config = {
                     </div>
                 </div>
 
-                <!-- Contact Form (Qualified Lead Capture) -->
-                <div id="contact" class="bg-zinc-900 p-8 rounded-2xl border border-zinc-800">
-                    <h3 class="text-lg font-bold mb-2">
-                        <span class="lang-en">Ready to Get Started?</span>
-                        <span class="lang-es">¿Listo para Empezar?</span>
-                    </h3>
-                    <p class="text-zinc-400 text-sm mb-6">
-                        <span class="lang-en">Fill out the form below and we'll contact you within 2 hours.</span>
-                        <span class="lang-es">Completa el formulario y te contactaremos en 2 horas.</span>
+                <!-- Quick Contact Links -->
+                <div class="text-right">
+                    <p class="text-zinc-400 text-sm mb-4">
+                        <span class="lang-en">Need help?</span>
+                        <span class="lang-es">¿Necesitas ayuda?</span>
                     </p>
-                    <form name="contacto-miami" method="POST" data-netlify="true" class="space-y-4">
-                        <!-- Row 1: Name & Phone -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label for="contact-name" class="block text-xs font-semibold text-zinc-300 mb-2">
-                                    <span class="lang-en">Full Name</span>
-                                    <span class="lang-es">Nombre Completo</span> *
-                                </label>
-                                <input id="contact-name" name="nombre" type="text" required placeholder="" autocomplete="name" class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-all">
-                            </div>
-                            <div>
-                                <label for="contact-phone" class="block text-xs font-semibold text-zinc-300 mb-2">
-                                    <span class="lang-en">Phone Number</span>
-                                    <span class="lang-es">Número de Teléfono</span> *
-                                </label>
-                                <input id="contact-phone" name="telefono" type="tel" required placeholder="" autocomplete="tel" class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-all">
-                            </div>
-                        </div>
-
-                        <!-- Row 2: Email & Service Type -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label for="contact-email" class="block text-xs font-semibold text-zinc-300 mb-2">
-                                    <span class="lang-en">Email Address</span>
-                                    <span class="lang-es">Correo Electrónico</span> *
-                                </label>
-                                <input id="contact-email" name="email" type="email" required placeholder="" autocomplete="email" class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-all">
-                            </div>
-                            <div>
-                                <label for="contact-service" class="block text-xs font-semibold text-zinc-300 mb-2">
-                                    <span class="lang-en">Service Needed</span>
-                                    <span class="lang-es">Servicio Requerido</span> *
-                                </label>
-                                <select id="contact-service" name="servicio" required class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-all">
-                                    <option value=""><span class="lang-en">Select a service</span><span class="lang-es">Selecciona un servicio</span></option>
-                                    <option value="weekly-maintenance"><span class="lang-en">Weekly Maintenance</span><span class="lang-es">Mantenimiento Semanal</span></option>
-                                    <option value="emergency-repair"><span class="lang-en">Emergency Repair</span><span class="lang-es">Reparación de Emergencia</span></option>
-                                    <option value="deep-cleaning"><span class="lang-en">Deep Cleaning</span><span class="lang-es">Limpieza Profunda</span></option>
-                                    <option value="seasonal"><span class="lang-en">Seasonal Opening/Closing</span><span class="lang-es">Apertura/Cierre Estacional</span></option>
-                                    <option value="renovation"><span class="lang-en">Renovation/Upgrade</span><span class="lang-es">Renovación/Mejora</span></option>
-                                    <option value="chemical-service"><span class="lang-en">Chemical Service & Testing</span><span class="lang-es">Servicio Químico y Pruebas</span></option>
-                                    <option value="other"><span class="lang-en">Other</span><span class="lang-es">Otro</span></option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Row 3: Pool Size & Contact Method -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label for="contact-pool-size" class="block text-xs font-semibold text-zinc-300 mb-2">
-                                    <span class="lang-en">Pool Size</span>
-                                    <span class="lang-es">Tamaño de Piscina</span>
-                                </label>
-                                <select id="contact-pool-size" name="tamaño-piscina" class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-all">
-                                    <option value="">-</option>
-                                    <option value="residential-small"><span class="lang-en">Residential (under 15k gal)</span><span class="lang-es">Residencial (menos de 15k gal)</span></option>
-                                    <option value="residential-large"><span class="lang-en">Residential (15k-25k gal)</span><span class="lang-es">Residencial (15k-25k gal)</span></option>
-                                    <option value="commercial"><span class="lang-en">Commercial/Multi-Property</span><span class="lang-es">Comercial/Multi-Propiedad</span></option>
-                                    <option value="not-sure"><span class="lang-en">Not sure</span><span class="lang-es">No estoy seguro</span></option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="contact-contact-method" class="block text-xs font-semibold text-zinc-300 mb-2">
-                                    <span class="lang-en">Preferred Contact</span>
-                                    <span class="lang-es">Contacto Preferido</span>
-                                </label>
-                                <select id="contact-contact-method" name="método-contacto" class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-all">
-                                    <option value="phone"><span class="lang-en">Phone Call</span><span class="lang-es">Llamada Telefónica</span></option>
-                                    <option value="whatsapp"><span class="lang-en">WhatsApp</span><span class="lang-es">WhatsApp</span></option>
-                                    <option value="email"><span class="lang-en">Email</span><span class="lang-es">Correo Electrónico</span></option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Message -->
-                        <div>
-                            <label for="contact-message" class="block text-xs font-semibold text-zinc-300 mb-2">
-                                <span class="lang-en">Additional Details (Optional)</span>
-                                <span class="lang-es">Detalles Adicionales (Opcional)</span>
-                            </label>
-                            <textarea id="contact-message" name="mensaje" rows="3" placeholder="" class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 transition-all"></textarea>
-                        </div>
-
-                        <!-- Submit -->
-                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                            <span class="lang-en">Get Free Estimate</span>
-                            <span class="lang-es">Obtener Presupuesto Gratis</span>
-                        </button>
-
-                        <p class="text-xs text-zinc-500 text-center">
-                            <span class="lang-en">We'll respond within 2 hours during business hours.</span>
-                            <span class="lang-es">Responderemos en 2 horas durante horario laboral.</span>
-                        </p>
-                    </form>
+                    <div class="space-y-2 text-sm">
+                        <a href="tel:+13055550199" class="block text-zinc-400 hover:text-white transition-colors">
+                            <span class="lang-en">(305) 555-0199</span>
+                            <span class="lang-es">(305) 555-0199</span>
+                        </a>
+                        <a href="https://wa.me/13055550199" class="block text-zinc-400 hover:text-white transition-colors">
+                            <span class="lang-en">WhatsApp Chat</span>
+                            <span class="lang-es">Chat WhatsApp</span>
+                        </a>
+                        <a href="#contacto" class="block text-blue-400 hover:text-blue-300 transition-colors font-semibold">
+                            <span class="lang-en">Get a Free Estimate</span>
+                            <span class="lang-es">Presupuesto Gratis</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
